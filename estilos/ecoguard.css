@@ -1,3 +1,4 @@
+/* Reset e configurações gerais */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,14 +6,60 @@ body {
   background-color: #f5f5f5;
 }
 
+/* Estilos do cabeçalho */
 .header {
-  background-color: #4caf50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #dfdfdf;
   color: white;
-  padding: 10px 20px;
-  text-align: left;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand .eco,
+.brand .guard {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   font-size: 24px;
 }
 
+.buttons {
+  display: flex;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-cadastrar {
+  background-color: #47a447;
+}
+
+.btn-entrar {
+  background-color: #337ab7;
+}
+
+/* Estilos do conteúdo principal */
 .container {
   background-color: white;
   padding: 20px;
@@ -45,10 +92,49 @@ body {
   margin-bottom: 20px;
 }
 
+/* Estilos do rodapé */
 .footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px 0;
   font-size: 16px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.objeto {
+  display: flex;
+  align-items: center;
+}
+
+.objeto img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.footer-circle {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #47a447;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
 }
