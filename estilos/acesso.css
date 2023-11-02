@@ -1,0 +1,97 @@
+@import "principal.css";
+
+body{
+    background-image: url("../imagens/image\ 81.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 50%; /* Defina a largura do elemento <main> conforme necessário */
+}
+
+
+.nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nome>img{
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.nome>div>h1:last-child{
+    color: var(--cor-de-letra);
+    margin-top: -10px;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 380px;
+    background-color: var(--cor-de-fundo);
+    margin: auto;
+    padding: 50px;
+    border: 2px solid var(--verde-botoes);
+    border-radius: 40px;
+}
+
+.cadastro>h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.cadastro>input{
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid var(--verde-botoes);
+}
+
+
+
+.cadastro>input[type="email"], .cadastro>input[type="password"]{
+    padding: 0px 15px;
+    color: var(--verde-botoes);
+}
+
+.cadastro>input::placeholder{
+    color: var(--verde-botoes);  
+}
+
+.btnAcesso{
+    color: white;
+    width: 100%;
+    height: 40px;
+    background-color: var(--verde-botoes);
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.possui{
+    margin: 30px auto;
+    width: 380px;
+    height: 100px;
+    background-color: var(--cor-de-fundo);
+    border-radius: 30px;
+    border: 2px solid var(--verde-botoes);
+    padding: 30px;
+    text-align: center;
+}
+
+.possui>p>a{
+    text-decoration: underline;
+}

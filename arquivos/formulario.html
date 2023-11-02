@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Denúncia</title>
+    <link rel="stylesheet" type="text/css" href="estilos/formulario.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Besley&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="main-container">
+        <div class="cabecalho">
+          <h1 class="titulo">Denúncia</h1>
+          <h5 class="subtitulo">
+            Obrigado pelo tempo que você reservou para nos enviar sua denúncia!
+          </h5>
+        </div>
+        <div class="conteudo">
+          <form>
+            <div class="form-denuncia">
+              <label for="denuncia">Sua denúncia é sobre *</label>
+              <input
+                type="search"
+                name="denuncia"
+                id="denuncia"
+                required=""
+                placeholder="Selecione o assunto. É possível escolher mais de um assunto."
+              />
+            </div>
+            <div class="form-data">
+              <label for="data">Quando *</label>
+              <input
+                type="date"
+                name="data"
+                id="data"
+                required=""
+                placeholder="Informe o dia e horário aproximados de quando ocorreu o evento."
+              />
+            </div>
+            <div class="form-relato">
+              <label for="relato">Relato *</label>
+              <textarea
+                name="relato"
+                id="relato"
+                required=""
+                placeholder="Descreva com o máximo de informações o crime que deseja denunciar: como ocorre(u), se há utilização de arma, veículo, instrumento, ameaça, etc."
+              ></textarea>
+            </div>
+            <div class="form-localizacao">
+              <h3>Onde *</h3>
+              <p>
+                Denúncias relacionadas ao estado do Maranhão. Favor inserir
+                local do crime, município, bairro, rua/avenida, casa/apto,
+                número, características do local, referências e quaisquer outras
+                informações que auxiliem na localização do imóvel.
+              </p>
+              <label for="logradouro"
+                >Logradouro (Rua, Av., Bairro, Travessa etc) *</label
+              >
+              <input
+                type="text"
+                id="logradouro"
+                name="logradouro"
+                required=""
+              />
+              <label for="estado">Estado:</label>
+              <input type="text" id="estado" name="estado" required="" />
+              <label for="cidade">Cidade:</label>
+              <input type="text" id="cidade" name="cidade" required="" />
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" required="" />
+              <label for="descricaoLocal">Descrição do Local:</label>
+              <textarea
+                id="descricaoLocal"
+                name="descricaoLocal"
+                placeholder="Descreva o local da ocorrência..."
+                required=""
+              ></textarea>
+              <label for="pontosReferencia">Pontos de Referência:</label>
+              <textarea
+                id="pontosReferencia"
+                name="pontosReferencia"
+                placeholder="Informe pontos de referência..."
+                required=""
+              ></textarea>
+            </div>
+            <div class="form-pessoas">
+              <h3>Fale sobre as Pessoas Envolvidas</h3>
+              <textarea
+                id="pessoasEnvolvidas"
+                name="pessoasEnvolvidas"
+                required=""
+                placeholder="Inserir informações do nome, sobrenome, apelido, características físicas, descrição de tatuagens, Pertence a alguma facção criminosa? E outras informações que julgar relevantes."
+              ></textarea>
+            </div>
+            <div class="form-contatos">
+              <h3>Contatos</h3>
+              <textarea
+                id="contatos"
+                name="contatos"
+                placeholder="Deixe seu telefone com dd e/ou e-mail (Esse campo é opcional). Todos os seus dados serão mantidos em sigilo!"
+              ></textarea>
+            </div>
+            <div class="form-button">
+              <input type="submit" value="Enviar" class="botao-enviar" />
+            </div>
+          </form>
+        </div>
+        <div class="rodape"></div>
+      </div>
+    </div>
+  </body>
+</html>

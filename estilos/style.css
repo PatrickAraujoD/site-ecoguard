@@ -1,0 +1,131 @@
+@import "principal.css";
+
+main{
+    z-index: 10;
+}
+
+.primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 50px;
+    width: 1200px;
+    margin: -30px auto;
+    background-color: var(--cor-de-fundo);
+    position: relative;
+    border-radius: 10px;
+}
+
+.subtitulo{
+    margin-bottom: 45px;
+}
+
+.subtitulo>h2{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.subtitulo>h2:last-child{
+    color: var(--cor-de-letra);
+    margin-top: -15px;
+}
+.descricao{
+    width: 400px;
+    text-align: justify;
+}
+
+.imgPlaneta{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+/*Segunda Section*/
+.secundary{
+    background-color: var(--cor-de-fundo-destaque);
+    height: 650px;
+    width: 100%;
+    z-index: -1;
+    padding: 40px 50px;
+}
+
+.divsecundary{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.division{
+    background-color: transparent;
+    border: 2px solid black;
+    width: 325px;
+    height: 505px;
+    padding: 20px;
+}
+
+.topicos{
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.informacoes{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.links>img{
+    width: 13px;
+    height: 13px;
+    transition: transform 1.2s ease;
+}
+
+.links>img:hover{
+    transform: translateX(20px);
+    cursor: pointer;
+}
+
+.sobrenos{
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sobrenosEco>h4{
+    font-weight: normal;
+    font-size: 35px;
+}
+
+.sobrenosEco>h3{
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--cor-de-letra);
+    margin-top: -20px;
+}
+
+.valores{
+    width: 522px;
+}
+
+.valores>h5{
+    font-weight: 500;
+    font-size: 26px;
+    text-align: justify;
+}
+
+.valores>p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
