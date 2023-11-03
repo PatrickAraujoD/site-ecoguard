@@ -1,0 +1,56 @@
+@import "principal.css"; 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    position: relative; 
+}
+.cabecalho {
+    top: 0;
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#mapid { 
+    margin: 50px;
+    height: 350px;
+    width: 800px;
+}
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 180px - 90px);
+    display: flex;
+    height: 100%;
+  
+}
+.info-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+form {
+    margin-top: 20px;
+    border: 2px solid var(--verde-botoes);
+    width: 80%;
+}
+
+#material{
+    width: 100%;
+}

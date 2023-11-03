@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="../estilos/stylemap.css"/>
+    <title>Leaflet</title>
+    
+</head>
+<body>
+    <header class="cabecalho">
+        <div>
+            <img src="../imagens/image 78.svg" alt="simbolo de reciclagem">
+            <div>   
+                <h1>ECO</h1>
+                <h1 class="planet">GUARD</h1>
+            </div>
+        </div>
+        <div class="bnts">
+            <a href="index.html" class="voltar">Voltar para tela inicial <img src="../imagens/image 82.png" alt="seta"></a>
+    
+        </div>
+    </header>
+    <main>
+        <div class="info-box">
+            <h1>Ecopontos São Luís</h1>
+            <p>Encontre o ponto mais próximo de você aqui!</p>
+            
+            <form>
+                <p>Ecolha o material que você deseja reciclar:</p>
+                <select name="material" id="material" required>
+                <option value="fauna">Tráfico de animais silvestres</option>
+                <option value="poluicao">Poluição</option>
+                <option value="desmatamento">Desmatamento</option>
+                <option value="Queimadas">Queimadas</option>
+                </select>
+            </form>
+            <h2></h2>
+            <div id="mapid"></div>
+            <script src="../scripts/index.js"></script>
+        </div>
+    </main>
+    <footer>
+        <div class="divRodape">
+            <img src="../imagens/image 78.svg" alt="" class="reciclagem">
+            <div>
+                <h1>ECO</h1>
+                <h1>GUARD</h1>
+            </div>
+        </div>
+        <div> 
+            <a href="">
+               <img src="../imagens/instagramicon.svg" alt="foto instagram" class="imgRodape"> 
+            </a>
+            <a href="">
+                <img src="../imagens/twittericon.svg" alt="foto twiter" class="imgRodape">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
