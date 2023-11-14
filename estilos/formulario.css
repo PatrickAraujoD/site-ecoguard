@@ -1,7 +1,6 @@
 @import "principal.css";
 
-
-form{
+form {
   display: flex;
   flex-direction: column;
   width: 650px;
@@ -12,18 +11,22 @@ form{
   margin: 10px auto 40px auto;
   font-weight: 600;
 }
-
-.Denunciash1{
+.cabecalho > div > a {
+  color: #000;
+}
+.Denunciash1 {
   text-align: center;
   margin: 30px 0px;
-  color: var(--verde-botoes)
+  color: var(--verde-botoes);
 }
 
-label{
+label {
   margin-bottom: 10px;
 }
 
-textarea, input, select{
+textarea,
+input,
+select {
   padding: 10px;
   margin-bottom: 20px;
   border: none;
@@ -33,11 +36,11 @@ textarea, input, select{
   color: #4e4c4c;
 }
 
-textarea{
+textarea {
   height: 150px;
 }
 
-form>div{
+form > div {
   display: flex;
   flex-direction: row;
   align-items: center;

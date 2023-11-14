@@ -1,131 +1,205 @@
 @import "principal.css";
 
-main{
-    z-index: 10;
+main {
+  z-index: 1;
 }
 
-.primary{
+.primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--branco);
+}
+
+.subtitulo {
+  margin-bottom: 45px;
+  justify-content: left;
+}
+
+.subtitulo > h2 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.subtitulo > h2:last-child {
+  color: var(--cor-de-letra);
+  margin-top: -15px;
+}
+.descricao {
+  max-width: 400px;
+  text-align: justify;
+}
+
+.imgPlaneta {
+  display: none;
+}
+
+/*Segunda Section*/
+.secundary {
+  padding: 50px;
+  background-color: var(--cor-de-fundo-destaque);
+  width: 100%;
+}
+
+.divsecundary {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.division {
+  background-color: transparent;
+  border: 2px solid black;
+  width: 325px;
+  height: 520px;
+  padding: 20px;
+}
+
+.topicos {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.informacoes {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.links > img {
+  width: 13px;
+  height: 13px;
+  transition: transform 1.2s ease;
+}
+
+.links > img:hover {
+  transform: translateX(20px);
+  cursor: pointer;
+}
+
+.sobrenos {
+  padding: 50px;
+}
+
+.sobrenosEco > h4 {
+  font-weight: normal;
+  font-size: 35px;
+}
+
+.sobrenosEco > h3 {
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--cor-de-letra);
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.valores {
+  max-width: 522px;
+}
+
+.valores > h5 {
+  font-weight: 500;
+  font-size: 26px;
+  font-size: 23px;
+  text-align: justify;
+}
+
+.valores > p {
+  margin-top: 20px;
+  font-size: 17px;
+  text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  header {
+    position: relative;
+  }
+
+  .primary {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 50px 50px;
-    width: 1200px;
+    max-width: 1200px;
     margin: -30px auto;
     background-color: var(--cor-de-fundo);
     position: relative;
     border-radius: 10px;
-}
+  }
 
-.subtitulo{
-    margin-bottom: 45px;
-}
-
-.subtitulo>h2{
-    font-size: 50px;
-    font-weight: 500;
-}
-
-.subtitulo>h2:last-child{
-    color: var(--cor-de-letra);
-    margin-top: -15px;
-}
-.descricao{
-    width: 400px;
-    text-align: justify;
-}
-
-.imgPlaneta{
-    width: 400px;
-    height: 400px;
+  .imgPlaneta {
+    max-width: 400px;
+    max-height: 400px;
     border-radius: 5px;
-}
+    display: block;
+  }
 
-/*Segunda Section*/
-.secundary{
+  .secundary {
     background-color: var(--cor-de-fundo-destaque);
-    height: 650px;
-    width: 100%;
     z-index: -1;
     padding: 40px 50px;
-}
+  }
 
-.divsecundary{
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.division{
-    background-color: transparent;
-    border: 2px solid black;
-    width: 325px;
-    height: 505px;
-    padding: 20px;
-}
-
-.topicos{
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-.informacoes{
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.links{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-.links>img{
-    width: 13px;
-    height: 13px;
-    transition: transform 1.2s ease;
-}
-
-.links>img:hover{
-    transform: translateX(20px);
-    cursor: pointer;
-}
-
-.sobrenos{
+  .sobrenos {
     margin: 50px 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
+  }
 
-.sobrenosEco>h4{
+  .sobrenosEco > h4 {
     font-weight: normal;
     font-size: 35px;
-}
+  }
 
-.sobrenosEco>h3{
+  .sobrenosEco > h3 {
     font-size: 50px;
     font-weight: 500;
     color: var(--cor-de-letra);
     margin-top: -20px;
-}
+  }
 
-.valores{
-    width: 522px;
-}
-
-.valores>h5{
+  .valores > h5 {
     font-weight: 500;
     font-size: 26px;
     text-align: justify;
-}
+  }
 
-.valores>p{
+  .valores > p {
     margin-top: 20px;
     font-size: 16px;
+  }
 }
 
-
+@media (min-width: 768px) {
+  .primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--cor-de-fundo);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .subtitulo {
+    margin-bottom: 10px;
+  }
+  .imgPlaneta {
+    display: block;
+    max-width: 300px;
+    max-height: 350px;
+    border-radius: 5px;
+  }
+}
