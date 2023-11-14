@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/acesso.css">
+    <link rel="shortcut icon" href="../imagens/icon plata.png" type="image/x-icon">
+    <title>Eco Guard</title>
+</head>
+<body>
+    <main>
+        <section class="nome">
+            <a href="../index.html"><img src="../imagens/image 78.svg" alt="imagem de reciclagem"></a>
+            <div>
+               <a href="../index.html"><h1>ECO</h1></a> 
+                <a href="../index.html"><h1>GUARD</h1></a>
+            </div>
+        </section>
+            <form action="#" class="cadastro">
+                <h2>Cadastrar</h2>
+                <input type="text" placeholder="Nome completo" id="nome" name="nome" required>
+                <input type="email" placeholder="Email" id="Email" name="Email" required>
+                <input type="password" placeholder="Senha" id="senha" name="senha" required>
+                <input type="text" inputmode="numeric" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
+                <label for="datadenascimento">Data de nascimento:</label>
+                <input type="date" id="datadenascimento" name="datadenascimento" placeholder="Digite sua data de nascimento" required>
+                <button class="btnAcesso">Cadastrar</button>
+            </form>
+            <section class="possui">
+                <p>Já possui um login no Eco Guard? <a href="login.html">Faça seu login aqui.</a></p>
+            </section>
+    </main>
+    
+</body>
+</html>
