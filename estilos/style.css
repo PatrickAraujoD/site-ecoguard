@@ -58,7 +58,6 @@ main {
   background-color: transparent;
   border: 2px solid black;
   width: 325px;
-  height: 520px;
   padding: 20px;
 }
 
@@ -90,6 +89,8 @@ main {
 
 .sobrenos {
   padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sobrenosEco > h4 {
@@ -105,9 +106,6 @@ main {
   margin-bottom: 20px;
 }
 
-.valores {
-  max-width: 522px;
-}
 
 .valores > h5 {
   font-weight: 500;
@@ -138,6 +136,10 @@ main {
     position: relative;
     border-radius: 10px;
   }
+  .subtitulo{
+    margin-bottom: 45px;
+  }
+  
 
   .imgPlaneta {
     max-width: 400px;
@@ -157,6 +159,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
   }
 
   .sobrenosEco > h4 {
@@ -170,6 +173,11 @@ main {
     color: var(--cor-de-letra);
     margin-top: -20px;
   }
+
+  .valores {
+    max-width: 522px;
+  }
+  
 
   .valores > h5 {
     font-weight: 500;
@@ -190,8 +198,6 @@ main {
     justify-content: space-around;
     background-color: var(--cor-de-fundo);
     border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 0;
   }
   .subtitulo {
     margin-bottom: 10px;
