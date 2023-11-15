@@ -65,6 +65,12 @@ form > div > div {
   width: 50%; 
 }
 #cidade{
+  margin-bottom: 20px;
+  border: none;
+  border: 2px solid var(--verde-botoes);
+  border-radius: 10px;
+  outline-color: green;
+  color: #4e4c4c;
   width: 98%;
 }
 #bairro{
