@@ -33,7 +33,7 @@ function success(pos) {
    
         
     if (!userMarkerAdded) {
-        userMarker = addCustomMarker(latitude, longitude, 'Estou aqui!', '../assets/iconlocaliza.svg' );
+        userMarker = addCustomMarker(latitude, longitude, 'Você está aqui!', '../assets/iconlocaliza.svg' );
         userMarkerAdded = true; // Define a variável como verdadeira para indicar que o marcador foi adicionado
     } else{
         userMarker.setLatLng([latitude, longitude]);

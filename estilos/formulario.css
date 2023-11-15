@@ -46,3 +46,6 @@ form > div {
   align-items: center;
   justify-content: space-between;
 }
+.divRodape>div>a{
+  color: black;
+}

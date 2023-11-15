@@ -1,17 +1,5 @@
 @import "principal.css";
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  position: relative;
-}
-.cabecalho {
-  top: 0;
-  height: auto;
-  width: 100%;
-}
 
 .nome > a {
   color: black;
@@ -19,15 +7,10 @@ body {
 
 .nome > a:last-child {
   color: var(--cor-de-letra);
-  margin-top: -10px;
 }
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+main {
+  z-index: 1;
 }
-
 #mapid {
   margin: 50px;
   height: 30vh;
@@ -35,15 +18,15 @@ body {
 }
 
 .info-box {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 60%;
+  /*top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  transform: translate(-50%, -50%);*/
+  
+  width: 100%;
 }
 .info-box > h1 {
   display: flex;
@@ -51,6 +34,16 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.info-box > p {
+  text-align: center;
+
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 20px;
 }
 form {
   margin-top: 20px;
@@ -62,18 +55,21 @@ form {
   width: 100%;
 }
 
+.footer {
+  position: fixed;
+  
+  width: 100%;
+}
+.divRodape>div>a{
+  color: black;
+}
+
+
+
+
+
 @media (min-width: 1024px) {
-  .info-box {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-  }
+ 
   .info-box > h1 {
     display: flex;
     font-size: 35px;
