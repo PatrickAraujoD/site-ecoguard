@@ -20,45 +20,16 @@ main {
   color: black;
 }
 
-.nome{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.nome>img{
-  width: 45px;
-  height: 45px;
-  margin-right: 10px;
-}
-
-.nome>div{
-  margin-left: 10px;
-}
-
-.nome>div>a{
-  color: black;
- 
-}
-
-.nome>div>a:last-child{
-  color: var(--cor-de-letra);
-}
-
-.nome>div>a>h1:last-child{
-  margin-top: -10px;
-}
-
 .titulo{
   text-align: center;
   color: var(--verde-botoes);
   margin-bottom: 20px;
 }
+
 .forms{
   display: flex;
   flex-direction: column;
-  width: 380px;
+  max-width: 380px;
   background-color: var(--cor-de-fundo);
   margin: auto;
   padding: 50px;
@@ -68,7 +39,6 @@ main {
 
 .forms>h2{
   text-align: center;
-  margin-bottom: 50px;
   font-weight: 400;
 }
 
@@ -80,7 +50,6 @@ main {
   border: 1px solid var(--verde-botoes);
   outline-color: green;
   margin-bottom: 30px;
-  
 }
 
 .btn{
@@ -98,20 +67,6 @@ main {
 label{
   color: black;
   font-weight: 500;
-}
-
-
-.btnAcesso {
-  position: relative;
-  color: white;
-  width: 50%;
-  align-items: center;
-  background-color: var(--verde-botoes);
-  border: none;
-  padding: 5px;
-  border-radius: 10px;
-  margin: 10px auto;
-  text-align: center;
 }
 
 .divRodape > div > a{
