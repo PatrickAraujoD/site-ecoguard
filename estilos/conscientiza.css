@@ -1,0 +1,95 @@
+@import "principal.css";
+
+main {
+  z-index: 1;
+}
+.nome>a{
+  color: black;
+}
+
+.primary{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.textcenter{
+  text-align: center;
+  margin: 40px;
+}
+
+.descricao {
+  text-align: justify;
+  margin: 10px;
+}
+
+.imgConscientiza {
+  width: 50%;
+}
+
+/*Segunda Section*/
+.secundary {
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.divsecundary {
+  text-align: justify;
+  width: 80%;
+}
+
+.division {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topicos {
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.informacoes {
+  margin-bottom: 20px;
+}
+
+.conclusao{
+  text-align: justify;
+  align-items: center;
+
+}
+.divRodape>div>a{
+  color:black;
+}
+
+
+@media (min-width: 1024px) {
+  header {
+    position: relative;
+  }
+
+  .division{
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .imgConscientiza {
+    max-width: 500px; 
+    border-radius: 5px;
+    margin-left: 50px;
+    display: block;
+  }
+
+  .secundary {
+    z-index: -1;
+    padding: 100px;
+  }
+  .divsecundary{
+    width: 50%;
+  }
+ 
+}

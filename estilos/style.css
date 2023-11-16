@@ -16,6 +16,7 @@ main {
 .subtitulo {
   margin-bottom: 45px;
   justify-content: left;
+  font-family: 'Abril Fatface', 'Poppins';
 }
 
 .subtitulo > h2 {
@@ -96,6 +97,8 @@ main {
 .sobrenosEco > h4 {
   font-weight: normal;
   font-size: 35px;
+  
+
 }
 
 .sobrenosEco > h3 {
@@ -104,6 +107,7 @@ main {
   color: var(--cor-de-letra);
   margin-top: -20px;
   margin-bottom: 20px;
+  font-family: 'Abril Fatface','Poppins' ;
 }
 
 
