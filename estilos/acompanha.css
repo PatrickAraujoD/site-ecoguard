@@ -52,11 +52,6 @@ main {
   margin-bottom: 30px;
 }
 
-.btn{
-  font-size: 20px;
-  align-items: center;
-}
-
 .forms>[type="tel"]{
   padding: 10px;
 }
