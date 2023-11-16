@@ -52,6 +52,11 @@ main {
   margin-bottom: 30px;
 }
 
+.btn{
+  font-size: 15px;
+
+}
+
 .forms>[type="tel"]{
   padding: 10px;
 }
