@@ -1,76 +1,119 @@
 @import "principal.css";
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-form {
+
+body {
   display: flex;
-  flex-direction: column; 
-  width: 80%;
-  background-color: var(--cor-de-fundo);
-  border: 2px solid var(--verde-botoes);
-  border-radius: 20px;
-  font-weight: 500;
-}
-.cabecalho > div > a {
-  color: #000;
-}
-.titulo {
-  text-align: center;
-  margin: 30px 40px;
-  color: var(--verde-botoes);
-}
-
-label {
-  margin-bottom: 10px;
-}
-
-input{
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border: 2px solid var(--verde-botoes);
-  border-radius: 10px;
-  outline-color: green;
-  color: #4e4c4c;
-  margin-bottom: 30px;
-
-
-}
-.btn{
-    width: 50%;
-    align-items: center;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 
-form > div {  
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex: 1; 
 }
 
-form > div > div {
-  display: flex;
-  flex-direction: column;
-}
-
-.divRodape>div>a{
+.cabecalho >div> a{
   color: black;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-@media (min-width: 1024px) {
-  form {
-    max-width: 450px;
-  }
+
+.nome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nome>img{
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.nome>div{
+  margin-left: 10px;
+}
+
+.nome>div>a{
+  color: black;
+ 
+}
+
+.nome>div>a:last-child{
+  color: var(--cor-de-letra);
+}
+
+.nome>div>a>h1:last-child{
+  margin-top: -10px;
+}
+
+.titulo{
+  text-align: center;
+  color: var(--verde-botoes);
+  margin-bottom: 20px;
+}
+.forms{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  background-color: var(--cor-de-fundo);
+  margin: auto;
+  padding: 50px;
+  border: 2px solid var(--verde-botoes);
+  border-radius: 40px;
+}
+
+.forms>h2{
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.forms>input{
+  margin-bottom: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid var(--verde-botoes);
+  outline-color: green;
+  margin-bottom: 30px;
   
-  
+}
+
+.btn{
+  font-size: 20px;
+}
+
+.forms>[type="tel"]{
+  padding: 10px;
+}
+
+.forms>input::placeholder{
+  color: black;
+}
+
+label{
+  color: black;
+  font-weight: 500;
+}
+
+
+.btnAcesso {
+  position: relative;
+  color: white;
+  width: 50%;
+  align-items: center;
+  background-color: var(--verde-botoes);
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.divRodape > div > a{
+  color: black;
 }
