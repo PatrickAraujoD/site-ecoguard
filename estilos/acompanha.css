@@ -54,7 +54,6 @@ main {
 
 .btn{
   font-size: 15px;
-
 }
 
 .forms>[type="tel"]{
@@ -68,6 +67,7 @@ main {
 label{
   color: black;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .divRodape > div > a{
