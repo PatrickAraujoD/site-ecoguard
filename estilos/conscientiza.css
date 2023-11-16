@@ -1,8 +1,5 @@
 @import "principal.css";
 
-main {
-  z-index: 1;
-}
 .nome>a{
   color: black;
 }
@@ -13,36 +10,49 @@ main {
   align-items: center;
   justify-content: center;
   
-  
 }
+
 .textcenter{
   text-align: center;
   margin: 40px;
 }
+.textcenter>h2{
+  color: var(--verde-botoes);
+}
 
 .descricao {
   text-align: justify;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .imgConscientiza {
-  width: 50%;
+  width: 70%;
 }
 
 /*Segunda Section*/
 .secundary {
   align-items: flex-start;
-  padding: 40px;
-  margin-top: -70px;
+  padding: 0 30px;
+  
+}
+.secundary>div>h1{
+  color: var(--verde-botoes);
+  margin-bottom: 30px;
 }
 .secundary>div>h1{
   text-align: center;
-  margin-bottom: 40px;
+}
+.secundary>div>p{
+  margin-bottom: 30px;
 }
 
 .divsecundary {
   text-align: justify;
-  width: 80%;
+}
+
+.divsecundary>h3 {
+  color: var(--verde-botoes);
+  
 }
 
 .division {
@@ -50,7 +60,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .topicos {
@@ -91,10 +101,16 @@ main {
 
   .secundary {
     z-index: -1;
-    padding: 100px;
+    padding: 0 100px;
   }
   .divsecundary{
     width: 50%;
   }
+  .secundary>div>p{
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
  
 }
