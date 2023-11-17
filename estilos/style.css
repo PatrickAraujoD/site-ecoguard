@@ -48,11 +48,9 @@ main {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  gap: 20px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .division {
@@ -60,6 +58,7 @@ main {
   border: 2px solid black;
   width: 325px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .topicos {
@@ -144,7 +143,6 @@ main {
     margin-bottom: 45px;
   }
   
-
   .imgPlaneta {
     max-width: 400px;
     max-height: 400px;
@@ -157,7 +155,9 @@ main {
     z-index: -1;
     padding: 40px 50px;
   }
-
+  .division{
+    padding: auto;
+  }
   .sobrenos {
     margin: 50px 50px;
     display: flex;
@@ -211,5 +211,28 @@ main {
     max-width: 300px;
     max-height: 350px;
     border-radius: 5px;
+  }
+  .divsecundary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center
+  
+}
+  .division{
+    margin: 20px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .divtertiary {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .divquartenary{
+    display: flex;
+    justify-content: center;
+  
   }
 }
