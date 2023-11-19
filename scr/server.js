@@ -3,6 +3,7 @@ const { Pool } = require('pg');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require('cors');
 
 // Configuração do pool do PostgreSQL (substitua com suas credenciais)
 const pool = new Pool({
@@ -12,12 +13,12 @@ const pool = new Pool({
   password: '2023',
   port: 5432,
 });
-
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota para lidar com o envio de formulário
-app.post('/scr/enviar-formulario', async (req, res) => {
+app.post('/enviar-formulario', async (req, res) => {
   try {
     const { denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos } = req.body;
 
