@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota para lidar com o envio de formulário
-app.post('/enviar-formulario', async (req, res) => {
+app.post('/scr/enviar-formulario', async (req, res) => {
   try {
     const { denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos } = req.body;
 
