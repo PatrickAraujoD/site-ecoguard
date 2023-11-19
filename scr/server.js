@@ -30,7 +30,7 @@ app.post('/enviar-formulario', async (req, res) => {
 
     idValue++;
 
-    const result = await pool.query('INSERT INTO formulario_denuncia.denuncias (id, tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *', [ idValue, denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos]);
+    const result = await pool.query('INSERT INTO formulario_denuncia.denuncias (id, tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *', [ idValue, denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos]);
 
     console.log('Dados inseridos com sucesso:', result.rows[0]);
 
