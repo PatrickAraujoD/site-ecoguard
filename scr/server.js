@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5432;
 
 // Configurar o pool do PostgreSQL
 const pool = new Pool({
@@ -12,6 +12,7 @@ const pool = new Pool({
     rejectUnauthorized: false,
   },
 });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
