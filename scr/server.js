@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 
 const app = express();
-const port = process.env.PORT || 5432;
+const port = process.env.PORT || 3000;
 
 // Configurar o pool do PostgreSQL
 const pool = new Pool({
@@ -12,7 +12,6 @@ const pool = new Pool({
     rejectUnauthorized: false,
   },
 });
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,7 +25,7 @@ app.post('/inserir-dados', async (req, res) => {
     const client = await pool.connect();
 
     // Inserir dados na tabela
-    const result = await client.query(
+    await client.query(
       'INSERT INTO denuncias (tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
       [denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos]
     );
