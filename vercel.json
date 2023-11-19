@@ -1,0 +1,13 @@
+{
+    "routes": [
+      {
+        "src": "/enviar-formulario",
+        "dest": "/src/server.js"
+      },
+      {
+        "src": "/.*",
+        "dest": "/src/server.js"
+      }
+    ]
+  }
+  
