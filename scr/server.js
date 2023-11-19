@@ -2,7 +2,7 @@ const express = require('express');
 const { Pool } = require('pg');
 const path = require('path');  // Adicione esta linha para importar o módulo 'path'
 const cors = require('cors');
-app.use(cors());
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -16,7 +16,7 @@ const pool = new Pool({
   password: '2023',
   port: 5432,
 });
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
