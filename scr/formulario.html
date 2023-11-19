@@ -55,36 +55,24 @@
     <script>
       document.getElementById('denunciaForm').addEventListener('submit', function (event) {
         event.preventDefault();
-  
-        const data = {
-          denuncia: document.getElementById('denuncia').value,
-          data: document.getElementById('data').value,
-          relato: document.getElementById('relato').value,
-          logradouro: document.getElementById('logradouro').value,
-          complemento: document.getElementById('complemento').value,
-          cidade: document.getElementById('cidade').value,
-          bairro: document.getElementById('bairro').value,
-          descricaoLocal: document.getElementById('descricaoLocal').value,
-          contatos: document.getElementById('telefone').value
-        };
-  
-        fetch('https://eco-guard-94kgwi0do-vitorgrs1s-projects.vercel.app/enviar-formulario' , {
+    
+        const formData = new FormData(this);
+    
+        fetch('https://eco-guard-94kgwi0do-vitorgrs1s-projects.vercel.app/enviar-formulario', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
+          body: formData,
           mode: 'cors',
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
       });
     </script>
+    
   </main>
   <footer>
     <div class="divRodape">
