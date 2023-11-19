@@ -1,9 +1,11 @@
 const express = require('express');
 const { Pool } = require('pg');
+const path = require('path');  // Adicione esta linha para importar o módulo 'path'
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const cors = require('cors');
+
 
 // Configuração do pool do PostgreSQL (substitua com suas credenciais)
 const pool = new Pool({
