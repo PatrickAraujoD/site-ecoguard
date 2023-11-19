@@ -52,7 +52,39 @@
       <input type="tel" inputmode="numeric" placeholder="Telefone" id="telefone" name="contatos" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
       <button type="submit" class="btn">Enviar</button>
     </form>
-    
+    <script>
+      document.getElementById('denunciaForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+  
+        const data = {
+          denuncia: document.getElementById('denuncia').value,
+          data: document.getElementById('data').value,
+          relato: document.getElementById('relato').value,
+          logradouro: document.getElementById('logradouro').value,
+          complemento: document.getElementById('complemento').value,
+          cidade: document.getElementById('cidade').value,
+          bairro: document.getElementById('bairro').value,
+          descricaoLocal: document.getElementById('descricaoLocal').value,
+          contatos: document.getElementById('telefone').value
+        };
+  
+        fetch('https://eco-guard-zeta.vercel.app/scr/formulario.html' , {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+          mode: 'cors',
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+      });
+    </script>
   </main>
   <footer>
     <div class="divRodape">

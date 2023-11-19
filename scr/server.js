@@ -7,7 +7,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
-
 // Configuração do pool do PostgreSQL (substitua com suas credenciais)
 const pool = new Pool({
   user: 'postgres',
@@ -22,10 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use((req, res, next) => {
-  console.log('Recebendo solicitação:', req.body);
-  next();
-});
 // Rota para lidar com o envio de formulário
 app.post('/enviar-formulario', async (req, res) => {
   try {
