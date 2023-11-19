@@ -6,7 +6,6 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-let idValue = 2000000;
 
 
 // Configuração do pool do PostgreSQL (substitua com suas credenciais)
@@ -19,7 +18,7 @@ const pool = new Pool({
 });
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src')));
 
 // Rota para lidar com o envio de formulário
 app.post('/enviar-formulario', async (req, res) => {
@@ -28,9 +27,7 @@ app.post('/enviar-formulario', async (req, res) => {
     
     console.log('Recebendo dados do formulário:', req.body);
 
-    idValue++;
-
-    const result = await pool.query('INSERT INTO formulario_denuncia.denuncias (id, tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *', [ idValue, denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos]);
+    const result = await pool.query('INSERT INTO formulario_denuncia.denuncias (id, tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES (DEFAULT,$1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *', [ denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos]);
 
     console.log('Dados inseridos com sucesso:', result.rows[0]);
 
