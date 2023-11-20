@@ -15,17 +15,18 @@ const pool = new Pool({
   password: '2023',
   port: 5432,
 });
-app.use(cors({
-  origin: 'https://eco-guard-zeta.vercel.app', // Substitua pelo domínio do seu cliente
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-}));
+app.use(cors());
+ 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 // Rota para lidar com o envio de formulário
 app.post('/enviar-formulario', async (req, res) => {
   try {
