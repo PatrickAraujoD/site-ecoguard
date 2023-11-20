@@ -1,8 +1,8 @@
 {
   "name": "projeto-site-disciplina-computacao-e-sociedade",
-  "version": "1.0.0",
+  "version": "1.0.0",  
+  "main": "index.js",
   "scripts": {
-    "start": "http-server -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
