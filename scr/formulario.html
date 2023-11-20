@@ -61,6 +61,7 @@
         fetch('https://eco-guard-94kgwi0do-vitorgrs1s-projects.vercel.app/enviar-formulario', {
           method: 'POST',
           body: formData,
+          credentials: 'include',
         })
           .then(response => response.json())
           .then(data => {
