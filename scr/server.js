@@ -13,7 +13,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'ecoguard',
-  password: '2023',
+  password: 'da612gEe*ed12fB24--eca1eAfFf62a2',
   port: 5432,
 });
 
