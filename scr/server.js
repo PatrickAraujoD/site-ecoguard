@@ -26,7 +26,7 @@ app.post('/inserirResposta', async (req, res) => {
     console.log('Resposta inserida com sucesso:', result);
     res.status(200).send('Resposta inserida com sucesso');
   } catch (error) {
-    console.error('Erro ao inserir resposta:', error);
+    console.error('Erro ao inserir denuncia:', error);
     res.status(500).send('Erro ao inserir resposta');
   }
 });
