@@ -1,4 +1,11 @@
 const { Pool } = require('pg');
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// Configuração do CORS
+app.use(cors());
+
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
