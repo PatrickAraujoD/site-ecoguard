@@ -6,6 +6,7 @@ const app = express();
 
 // Configuração do CORS
 app.use(cors());
+app.use(express.json()); 
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
