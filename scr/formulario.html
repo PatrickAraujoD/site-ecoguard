@@ -52,7 +52,7 @@
       <input type="tel" inputmode="numeric" placeholder="Telefone" id="contatos" name="contatos" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
       <button type="submit" class="btn">Enviar</button>
     </form>
-    <script type="module" src="./scr/server.js">
+    <script type="module" src="./server.js">
       import { inserirResposta } from './scr/server.js';
       
       async function enviarFormulario(event) {
