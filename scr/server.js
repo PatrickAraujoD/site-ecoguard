@@ -30,7 +30,7 @@ app.post('/inserirResposta', async (req, res) => {
     res.status(500).send('Erro ao inserir resposta');
   }
 });
-
+app.options('/inserirResposta', cors());
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor está ouvindo na porta ${PORT}`);
