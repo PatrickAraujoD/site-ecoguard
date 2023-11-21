@@ -52,7 +52,9 @@
       <input type="tel" inputmode="numeric" placeholder="Telefone" id="contatos" name="contatos" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
       <button type="submit" class="btn">Enviar</button>
     </form>
-    <script>
+    <script src="./scr/formulario.html">
+      import { inserirResposta } from './scr/server.js';
+      
       async function enviarFormulario(event) {
         event.preventDefault();
     
@@ -70,6 +72,7 @@
         // Chame a função que insere os dados no banco de dados
         await inserirResposta(denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos);
       }
+      document.getElementById('meuFormulario').addEventListener('submit', enviarFormulario);
     </script>
 
   </main>

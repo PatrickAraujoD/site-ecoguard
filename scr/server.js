@@ -15,7 +15,7 @@ const pool = new Pool({
 });
 
 
-async function inserirResposta(denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos) {
+export async function inserirResposta(denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos) {
   const query = 'INSERT INTO denuncias (id, tipo_de_denuncia, data_do_ocorrido, relato, logradouro, complemento, cidade, bairro, descricao_do_local, contato) VALUES (DEFAULT,$1, $2, $3, $4, $5, $6, $7, $8, $9)';
   const values = [denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos];
 
