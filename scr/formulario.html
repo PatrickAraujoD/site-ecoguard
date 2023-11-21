@@ -19,7 +19,7 @@
   </header>
   <main>
     <h1 class="Denunciash1">Faça sua denúncia</h1>
-    <form id="denunciaForm" action= "/scr/enviar-formulario"  method= "POST" enctype="multipart/form-data">
+    <form id="meuFormulario" onsubmit="enviarFormulario(event)">
       <label for="denuncia">Qual sua denúncia</label>
       <select name="denuncia" id="denuncia" required>
         <option value="Trafico de animais silvestres">Tráfico de animais silvestres</option>
@@ -52,6 +52,26 @@
       <input type="tel" inputmode="numeric" placeholder="Telefone" id="telefone" name="contatos" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
       <button type="submit" class="btn">Enviar</button>
     </form>
+    <script>
+      async function enviarFormulario(event) {
+        event.preventDefault();
+    
+        const denuncia = document.getElementById('denuncia').value;
+        const data = document.getElementById('data').value;
+        const relato = document.getElementById('relato').value;
+        const logradouro = document.getElementById('logradouro').value;
+        const complemento = document.getElementById('complemento').value;
+        const cidade = document.getElementById('cidade').value;
+        const bairro = document.getElementById('bairro').value;
+        const descricaoLocal = document.getElementById('descricaoLocal').value;
+        const contatos = document.getElementById('contatos').value;
+
+    
+        // Chame a função que insere os dados no banco de dados
+        await inserirResposta(denuncia, data, relato, logradouro, complemento, cidade, bairro, descricaoLocal, contatos);
+      }
+    </script>
+
   </main>
   <footer>
     <div class="divRodape">
