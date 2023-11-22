@@ -99,7 +99,13 @@
   
             // Exibir o ID na página
             const mensagemElemento = document.getElementById('mensagem');
-            mensagemElemento.textContent = `Protocolo: ${idDaDenuncia}`;
+    
+            // Verificar se o elemento existe antes de definir o textContent
+            if (mensagemElemento) {
+              mensagemElemento.textContent = `Protocolo: ${idDaDenuncia}`;
+            } else {
+              console.error('Elemento "mensagem" não encontrado na página.');
+            }
             
             // Recarregar a página após alguns segundos
             setTimeout(() => {
