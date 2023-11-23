@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/feedback/:id", "destination": "/scr/feedback.html" },
-    { "source": "/api/*", "destination": "/api/index.js" }
-  ]
-}
