@@ -73,3 +73,28 @@ label{
 .divRodape > div > a{
   color: black;
 }
+
+#loadingDiv,
+#successDiv,
+#errordiv{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #4CAF50; /* Cor verde para sucesso */
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  z-index: 999; /* Valor alto para sobrepor outros elementos */
+}
+
+#loadingDiv p,
+#errordiv p
+{
+margin: 10px 0;
+}
+
+#errordiv{
+border: 2px solid #4CAF50; 
+}
