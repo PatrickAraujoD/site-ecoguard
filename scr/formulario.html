@@ -12,17 +12,15 @@
 <body>
   <div id="loadingDiv" style="display: none;">
     <p>Enviando denúncia. Aguarde...</p>
-        <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
-
+    <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
   </div>
   <div id="errordiv" style="display: none;">
     <p>Erro ao enviar denúncia. Tente novamente...</p>
-        <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
-
+    <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
   </div>
   <div id="successDiv" style="display: none;">
     <p>Denúncia enviada com sucesso</p>
-    <p id="protocoloMensagem"></p>
+    <p id="Mensagem"></p>
     <button class="btn" id="fecharMensagem" onclick="fecharMensagem()">Fechar</button>
 
   </div>
@@ -127,12 +125,15 @@
               protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
             }
             
-            // Recarregar a página após alguns segundos
             
           } else {
             console.error('Erro ao inserir resposta:', response.statusText);
             // Exibir mensagem de erro
-            alert('Erro ao enviar denúncia');
+            const errordiv = document.getElementById('errordiv');
+        
+            if (errordiv) {
+              errordiv.style.display = 'block';
+            }
           }
         } catch (error) {
           console.error('Erro ao enviar a solicitação:', error);
@@ -140,7 +141,7 @@
       }
       function fecharMensagem2() {
         // Oculta a div de sucesso
-        const loadingDiv = document.getElementById('errordiv');
+        const errordiv = document.getElementById('errordiv');
         
         if (errordiv) {
           errordiv.style.display = 'none';
@@ -151,6 +152,7 @@
       function fecharMensagem1() {
         // Oculta a div de sucesso
         const loadingDiv = document.getElementById('loadingDiv');
+
         
         if (loadingDiv) {
           loadingDiv.style.display = 'none';
