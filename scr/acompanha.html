@@ -24,6 +24,79 @@
         <input type="tel" inputmode="numeric" placeholder="Protocolo" id="Protocolo" name="Protocolo" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
         <input type="submit" id="submit" class="btn" value="Entrar">
     </form>
+    <script>
+      async function enviarFormulario(event) {
+        event.preventDefault();
+  
+        const denuncia = document.getElementById('denuncia').value;
+        const data = document.getElementById('data').value;
+        const relato = document.getElementById('relato').value;
+        const logradouro = document.getElementById('logradouro').value;
+        const complemento = document.getElementById('complemento').value;
+        const cidade = document.getElementById('cidade').value;
+        const bairro = document.getElementById('bairro').value;
+        const descricaoLocal = document.getElementById('descricaoLocal').value;
+        const contatos = document.getElementById('contatos').value;
+
+
+        const loadingDiv = document.getElementById('loadingDiv');
+        
+        if (loadingDiv) {
+          loadingDiv.style.display = 'block';
+        }
+        try {
+  
+          const response = await fetch('https://servidor-banco-de-dados-production.up.railway.app/inserirResposta', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              denuncia,
+              data,
+              relato,
+              logradouro,
+              complemento,
+              cidade,
+              bairro,
+              descricaoLocal,
+              contatos,
+            }),
+          });
+  
+          if (response.ok) {
+            if (loadingDiv) {
+              loadingDiv.style.display = 'none';
+            }
+            // Obter o ID da denúncia a partir da resposta do servidor
+            const responseData = await response.json();
+            const idDaDenuncia = responseData.id;
+            
+            // Exibir o ID na página
+            const successDiv = document.getElementById('successDiv');
+            const protocoloMensagem = document.getElementById('protocoloMensagem');
+  
+            if (successDiv && protocoloMensagem) {
+              successDiv.style.display = 'block';
+              protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
+            }
+        
+          } else {
+            console.error('Erro ao inserir resposta:', response.statusText);
+            if (loadingDiv) {
+              loadingDiv.style.display = 'none';
+            }
+            // Exibir mensagem de erro
+            const errordiv = document.getElementById('errordiv');
+        
+            if (errordiv) {
+              errordiv.style.display = 'block';
+            }
+          }
+        } catch (error) {
+          console.error('Erro ao enviar a solicitação:', error);
+        }
+    </script>
   </main>
   <footer>
     <div class="divRodape">
