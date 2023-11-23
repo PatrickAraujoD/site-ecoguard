@@ -10,6 +10,14 @@
  
 </head>
 <body>
+  <div id="loadingDiv" style="display: none;">
+    <p>Procurando sua denúncia. Aguarde...</p>
+    <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
+  </div>
+  <div id="errordiv" style="display: none;">
+    <p>Erro ao enviar denúncia. Tente novamente...</p>
+    <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
+  </div>
   <header class="cabecalho">
     <a href="../index.html"><img src="../assets/images/image 78.svg" alt="simbolo de reciclagem"></a>
       <div>   
@@ -18,7 +26,6 @@
       </div>
   </header>
   <main>
-    
     <form action="" class="forms">
         <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
         <label for="Protocolo">Protocolo</label>
@@ -69,40 +76,34 @@
             if (loadingDiv) {
               loadingDiv.style.display = 'none';
             }
+          
             // Obter o ID da denúncia a partir da resposta do servidor
             const responseData = await response.json();
             const idDaDenuncia = responseData.id;
-            
-            // Exibir o ID na página
-            const successDiv = document.getElementById('successDiv');
-            const protocoloMensagem = document.getElementById('protocoloMensagem');
-  
-            if (successDiv && protocoloMensagem) {
-              successDiv.style.display = 'block';
-              protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
-            }
-        
-          } else {
-            console.error('Erro ao inserir resposta:', response.statusText);
-            if (loadingDiv) {
-              loadingDiv.style.display = 'none';
-            }
-            // Exibir mensagem de erro
-            const errordiv = document.getElementById('errordiv');
-        
-            if (errordiv) {
-              errordiv.style.display = 'block';
-            }
+          
+            // Fazer solicitação ao banco de dados para obter detalhes da denúncia
+            const detalhesResponse = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/detalhes/${idDaDenuncia}`);
+            const detalhesData = await detalhesResponse.json();
+          
+            // Redirecionar para a página de feedback com os detalhes da denúncia
+            window.location.href = `/feedback.html?id=${idDaDenuncia}&tipo=${detalhesData.tipo_de_denuncia}&data=${detalhesData.data_do_ocorrido}&...`; // Adicione outros campos conforme necessário
+        } else {
+          console.error('Erro ao inserir resposta:', response.statusText);
+          if (loadingDiv) {
+            loadingDiv.style.display = 'none';
           }
-        } catch (error) {
+          // Exibir mensagem de erro
+          const errordiv = document.getElementById('errordiv');
+      
+          if (errordiv) {
+            errordiv.style.display = 'block';
+          }
+        }
+      } catch (error) {
           console.error('Erro ao enviar a solicitação:', error);
         }
-      const params = new URLSearchParams(window.location.search);
-    
-      // Preencher os detalhes da denúncia
-      document.getElementById('idDaDenuncia').textContent = params.get('id');
-      document.getElementById('tipoDenuncia').textContent = params.get('tipo');
-      document.getElementById('dataOcorrido').textContent = params.get('data');
+        
+      
     </script>
   </main>
   <footer>
