@@ -18,6 +18,7 @@
       </div>
   </header>
   <main>
+    
     <form action="" class="forms">
         <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
         <label for="Protocolo">Protocolo</label>
@@ -96,6 +97,12 @@
         } catch (error) {
           console.error('Erro ao enviar a solicitação:', error);
         }
+      const params = new URLSearchParams(window.location.search);
+    
+      // Preencher os detalhes da denúncia
+      document.getElementById('idDaDenuncia').textContent = params.get('id');
+      document.getElementById('tipoDenuncia').textContent = params.get('tipo');
+      document.getElementById('dataOcorrido').textContent = params.get('data');
     </script>
   </main>
   <footer>
