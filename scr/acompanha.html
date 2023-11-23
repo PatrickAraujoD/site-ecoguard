@@ -26,86 +26,57 @@
       </div>
   </header>
   <main>
-    <form action="" class="forms">
-        <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
-        <label for="Protocolo">Protocolo</label>
-        <input type="tel" inputmode="numeric" placeholder="Protocolo" id="Protocolo" name="Protocolo" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
-        <input type="submit" id="submit" class="btn" value="Entrar">
+    <form action="" class="forms" onsubmit="enviarFormulario(event)">        
+      <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
+      <label for="Protocolo">Protocolo</label>
+      <input type="tel" inputmode="numeric" placeholder="Protocolo" id="Protocolo" name="Protocolo" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
+      <input type="submit" id="submit" class="btn" value="Entrar">
     </form>
     <script>
       async function enviarFormulario(event) {
         event.preventDefault();
-  
-        const denuncia = document.getElementById('denuncia').value;
-        const data = document.getElementById('data').value;
-        const relato = document.getElementById('relato').value;
-        const logradouro = document.getElementById('logradouro').value;
-        const complemento = document.getElementById('complemento').value;
-        const cidade = document.getElementById('cidade').value;
-        const bairro = document.getElementById('bairro').value;
-        const descricaoLocal = document.getElementById('descricaoLocal').value;
-        const contatos = document.getElementById('contatos').value;
 
-
+        const protocolo = document.getElementById('Protocolo').value;
         const loadingDiv = document.getElementById('loadingDiv');
-        
+
         if (loadingDiv) {
           loadingDiv.style.display = 'block';
         }
+
         try {
-  
-          const response = await fetch('https://servidor-banco-de-dados-production.up.railway.app/inserirResposta', {
-            method: 'POST',
+          const response = await fetch('https://servidor-banco-de-dados-production.up.railway.app/obterDenuncia/' + protocolo, {
+            method: 'GET',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-              denuncia,
-              data,
-              relato,
-              logradouro,
-              complemento,
-              cidade,
-              bairro,
-              descricaoLocal,
-              contatos,
-            }),
           });
-  
+
           if (response.ok) {
             if (loadingDiv) {
               loadingDiv.style.display = 'none';
             }
-          
-            // Obter o ID da denúncia a partir da resposta do servidor
-            const responseData = await response.json();
-            const idDaDenuncia = responseData.id;
-          
-            // Fazer solicitação ao banco de dados para obter detalhes da denúncia
-            const detalhesResponse = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/detalhes/${idDaDenuncia}`);
-            const detalhesData = await detalhesResponse.json();
-          
+
             // Redirecionar para a página de feedback com os detalhes da denúncia
-            window.location.href = `/feedback.html?id=${idDaDenuncia}&tipo=${detalhesData.tipo_de_denuncia}&data=${detalhesData.data_do_ocorrido}&...`; // Adicione outros campos conforme necessário
-        } else {
-          console.error('Erro ao inserir resposta:', response.statusText);
-          if (loadingDiv) {
-            loadingDiv.style.display = 'none';
+            const responseData = await response.json();
+            window.location.href = `/feedback.html?id=${responseData.id}&tipo=${responseData.tipo_de_denuncia}&data=${responseData.data_do_ocorrido}&...`; // Adicione outros campos conforme necessário
+          } else {
+            console.error('Erro ao obter denúncia:', response.statusText);
+            if (loadingDiv) {
+              loadingDiv.style.display = 'none';
+            }
+            // Exibir mensagem de erro
+            const errordiv = document.getElementById('errordiv');
+
+            if (errordiv) {
+              errordiv.style.display = 'block';
+            }
           }
-          // Exibir mensagem de erro
-          const errordiv = document.getElementById('errordiv');
-      
-          if (errordiv) {
-            errordiv.style.display = 'block';
-          }
-        }
-      } catch (error) {
+        } catch (error) {
           console.error('Erro ao enviar a solicitação:', error);
         }
-        
-      
+      }
     </script>
-  </main>
+    </main>
   <footer>
     <div class="divRodape">
       <a href="../index.html"><img src="../assets/images/image 78.svg" alt="simbolo de reciclagem"></a>        
