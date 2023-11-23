@@ -51,6 +51,7 @@
   </footer>
   <script>
     const params = new URLSearchParams(window.location.search);
+    const idDaDenuncia = params.get('id');
     
       // Preencher os detalhes da denúncia
       document.getElementById('idDaDenuncia').textContent = params.get('id');
