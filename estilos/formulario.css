@@ -80,6 +80,37 @@ form > div > div {
 .divRodape>div>a{
   color: black;
 }
+
+/* Adicione estas regras no final do seu arquivo CSS */
+#loadingDiv,
+#successDiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #4CAF50; /* Cor verde para sucesso */
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  z-index: 999; /* Valor alto para sobrepor outros elementos */
+}
+
+#loadingDiv p,
+#successDiv p {
+margin: 10px 0;
+}
+
+#successDiv {
+border: 2px solid #4CAF50; /* Cor verde para sucesso */
+}
+
+#protocoloMensagem {
+font-weight: bold;
+color: #4CAF50; /* Cor verde para sucesso */
+}
+
+
 @media (min-width: 1024px) {
   form {
     max-width: 750px;

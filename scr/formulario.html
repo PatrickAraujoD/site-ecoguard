@@ -10,7 +10,17 @@
  
 </head>
 <body>
-  <div id="mensagem"></div>
+  <div id="loadingDiv" style="display: none;">
+    <p>Enviando denúncia. Aguarde...</p>
+        <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
+
+  </div>
+  <div id="successDiv" style="display: none;">
+    <p>Denúncia enviada com sucesso</p>
+    <p id="protocoloMensagem"></p>
+    <button class="btn" id="fecharMensagem" onclick="fecharMensagem()">Fechar</button>
+
+  </div>
   <header class="cabecalho">
     <a href="../index.html"><img src="../assets/images/image 78.svg" alt="simbolo de reciclagem"></a>
       <div>   
@@ -65,12 +75,15 @@
         const cidade = document.getElementById('cidade').value;
         const bairro = document.getElementById('bairro').value;
         const descricaoLocal = document.getElementById('descricaoLocal').value;
-  
         const contatos = document.getElementById('contatos').value;
-  
+
+
+        const loadingDiv = document.getElementById('loadingDiv');
+        
+        if (loadingDiv) {
+          loadingDiv.style.display = 'block';
+        }
         try {
-          // Exibir uma mensagem de carregamento
-          alert('Enviando denúncia. Aguarde...');
   
           const response = await fetch('https://servidor-banco-de-dados-production.up.railway.app/inserirResposta', {
             method: 'POST',
@@ -91,27 +104,26 @@
           });
   
           if (response.ok) {
-            // Exibir mensagem de sucesso
-            alert('Denúncia enviada com sucesso');
+            if (loadingDiv) {
+              loadingDiv.style.display = 'none';
+            }
+            
   
             // Obter o ID da denúncia a partir da resposta do servidor
             const responseData = await response.json();
             const idDaDenuncia = responseData.id;
   
             // Exibir o ID na página
-            const mensagemElemento = document.getElementById('mensagem');
-    
-            // Verificar se o elemento existe antes de definir o textContent
-            if (mensagemElemento) {
-              mensagemElemento.textContent = `Protocolo: ${idDaDenuncia}`;
-            } else {
-              console.error('Elemento "mensagem" não encontrado na página.');
+            const successDiv = document.getElementById('successDiv');
+            const protocoloMensagem = document.getElementById('protocoloMensagem');
+
+            if (successDiv && protocoloMensagem) {
+              successDiv.style.display = 'block';
+              protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
             }
             
             // Recarregar a página após alguns segundos
-            setTimeout(() => {
-              window.location.href = window.location.href; // Esta linha deve recarregar a página
-            }, 3000);
+            
           } else {
             console.error('Erro ao inserir resposta:', response.statusText);
             // Exibir mensagem de erro
@@ -120,6 +132,30 @@
         } catch (error) {
           console.error('Erro ao enviar a solicitação:', error);
         }
+      }
+      function fecharMensagem1() {
+        // Oculta a div de sucesso
+        const loadingDiv = document.getElementById('loadingDiv');
+        
+        if (loadingDiv) {
+          loadingDiv.style.display = 'none';
+        }
+
+        // Recarrega a página apenas quando o botão "Fechar" é clicado
+       // window.location.href = window.location.href;
+
+      }
+      function fecharMensagem() {
+        // Oculta a div de sucesso
+        const successDiv = document.getElementById('successDiv');
+
+        if (successDiv) {
+          successDiv.style.display = 'none';
+        }
+
+        // Recarrega a página apenas quando o botão "Fechar" é clicado
+       // window.location.href = window.location.href;
+
       }
   
     </script>
