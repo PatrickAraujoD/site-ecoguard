@@ -75,7 +75,6 @@ label{
 }
 
 #loadingDiv,
-#successDiv,
 #errordiv{
   position: fixed;
   top: 50%;
