@@ -20,8 +20,16 @@
   <main>
     <h1 class="titulo-feedback">Detalhes da Denúncia</h1>
     <div id="detalhesDenuncia" class="detalhes-denuncia">
-      <p>ID: <%= denuncia.id %></p>
+      <p>Protocolo: <%= denuncia.id %></p>
       <p>Tipo de Denúncia: <%= denuncia.tipo_de_denuncia %></p>
+      <p>Data do ocorrido:<%= denuncia.data_do_ocorrido %></p>
+      <p>Relato:<%= denuncia.relato %></p>
+      <p>Logradouro:<%= denuncia.logradouro %></p>
+      <p>Complemento:<%= denuncia.complemento %></p>
+      <p>Cidade:<%= denuncia.cidade %></p>
+      <p>Bairro:<%= denuncia.bairro %></p>
+      <p>Descrição do Local:<%= denuncia.descricao_do_local %></p>
+      <p>Contato:<%= denuncia.contato %></p>
     </div>
   </main>
   <footer>
@@ -48,6 +56,16 @@
       document.getElementById('idDaDenuncia').textContent = params.get('id');
       document.getElementById('tipoDenuncia').textContent = params.get('tipo');
       document.getElementById('dataOcorrido').textContent = params.get('data');
+      document.getElementById('relato').textContent = params.get('relato');
+      document.getElementById('logradouro').textContent = params.get('logradouro');
+      document.getElementById('complemento').textContent = params.get('complemento');
+      document.getElementById('cidade').textContent = params.get('cidade');
+      document.getElementById('bairro').textContent = params.get('bairo');
+      document.getElementById('descricao').textContent = params.get('descricao');
+      document.getElementById('contato').textContent = params.get('contato');
+  
+
+
   </script>
   
 </body>
