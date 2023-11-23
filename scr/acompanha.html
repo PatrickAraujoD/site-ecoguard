@@ -75,6 +75,27 @@
           console.error('Erro ao enviar a solicitação:', error);
         }
       }
+      function fecharMensagem2() {
+        // Oculta a div de sucesso
+        const errordiv = document.getElementById('errordiv');
+        
+        if (errordiv) {
+          errordiv.style.display = 'none';
+        }
+
+        
+      }
+      function fecharMensagem1() {
+        // Oculta a div de sucesso
+        const loadingDiv = document.getElementById('loadingDiv');
+
+        
+        if (loadingDiv) {
+          loadingDiv.style.display = 'none';
+        }
+
+
+      }
     </script>
     </main>
   <footer>
