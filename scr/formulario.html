@@ -110,8 +110,6 @@
             if (loadingDiv) {
               loadingDiv.style.display = 'none';
             }
-            
-  
             // Obter o ID da denúncia a partir da resposta do servidor
             const responseData = await response.json();
             const idDaDenuncia = responseData.id;
@@ -119,13 +117,12 @@
             // Exibir o ID na página
             const successDiv = document.getElementById('successDiv');
             const protocoloMensagem = document.getElementById('protocoloMensagem');
-
+  
             if (successDiv && protocoloMensagem) {
               successDiv.style.display = 'block';
               protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
             }
-            
-            
+        
           } else {
             console.error('Erro ao inserir resposta:', response.statusText);
             // Exibir mensagem de erro
