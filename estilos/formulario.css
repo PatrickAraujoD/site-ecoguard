@@ -83,7 +83,8 @@ form > div > div {
 
 /* Adicione estas regras no final do seu arquivo CSS */
 #loadingDiv,
-#successDiv {
+#successDiv,
+#errordiv{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -97,14 +98,18 @@ form > div > div {
 }
 
 #loadingDiv p,
-#successDiv p {
+#successDiv p,
+#errordiv p
+{
 margin: 10px 0;
 }
 
 #successDiv {
-border: 2px solid #4CAF50; /* Cor verde para sucesso */
+border: 2px solid #4CAF50; 
 }
-
+#errordiv{
+border: 2px solid #4CAF50; 
+}
 #protocoloMensagem {
 font-weight: bold;
 color: #4CAF50; /* Cor verde para sucesso */
