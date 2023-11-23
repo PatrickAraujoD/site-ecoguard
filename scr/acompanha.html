@@ -58,7 +58,7 @@
   
           // Redirecionar para a página de feedback com os detalhes da denúncia
           const responseData = await response.json();
-          const url = `/feedback?id=${responseData.id}`;
+          const url = `/feedback/=${responseData.id}`;
           window.location.href = url;        
         } else {
           console.error('Erro ao obter denúncia:', response.statusText);
