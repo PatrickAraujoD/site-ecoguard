@@ -54,7 +54,7 @@
 
 
       try {
-        const response = await fetch(`/obterDenuncia/${protocolo}`);
+        const response = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/obterDenuncia/${protocolo}`);
         
         if (response.ok) {
           const denunciaData = await response.json();
