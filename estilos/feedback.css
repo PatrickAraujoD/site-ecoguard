@@ -22,6 +22,10 @@ main {
 .divRodape > div > a{
   color: black;
 }
+
+.denucniaInfo>h1{
+  font-size:500;
+}
 #loadingDiv,
 #errordiv{
   position: fixed;
