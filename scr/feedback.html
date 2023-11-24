@@ -63,15 +63,15 @@
           const denunciaInfo = document.getElementById('denunciaInfo');
           if (denunciaInfo) {
             denunciaInfo.innerHTML = `
-              <p>ID: ${denunciaData.id}</p>
-              <p>ID da Denúncia: ${denunciaData.tipo_de_denuncia}</p>
-              <p>Tipo de Denúncia: ${denunciaData.data_do_ocorrido}</p>
-              <p>Data do Ocorrido: ${denunciaData.relato}</p>
-              <p>Relato: ${denunciaData.logradouro}</p>
-              <p>Logradouro: ${denunciaData.complemento}</p>
-              <p>Complemento: ${denunciaData.cidade}</p>
-              <p>Cidade: ${denunciaData.bairro}</p>
-              <p>Bairro: ${denunciaData.descricao_do_local}</p>
+              <h1>Protocolo: ${denunciaData.id}</h1>
+              <h1>Denúncia sobre: ${denunciaData.tipo_de_denuncia}</h1>
+              <p>Data do Ocorrido: ${denunciaData.data_do_ocorrido}</p>
+              <p>Relato: ${denunciaData.relato}</p>
+              <p>Logradouro: ${denunciaData.logradouro}</p>
+              <p>Complemento: ${denunciaData.complemento}</p>
+              <p>Cidade: ${denunciaData.cidade}</p>
+              <p>Bairro: ${denunciaData.bairro}</p>
+              <p>Descrição do local: ${denunciaData.descricao_do_local}</p>
               <p>Contato: ${denunciaData.contato}</p>
             `;
           }
