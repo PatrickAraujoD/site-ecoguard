@@ -41,7 +41,7 @@ main {
 }
 
 .denunciaInfo{
-  max-width: 600px; 
+  max-width: 80%; 
   word-wrap: break-word; 
   margin-bottom: 20px;
   
@@ -87,4 +87,11 @@ margin: 10px 0;
 
 #errordiv{
 border: 2px solid #4CAF50; 
+}
+@media (min-width: 1024px) {
+  .denunciaInfo {
+    max-width: 700px;
+    
+  }
+  
 }
