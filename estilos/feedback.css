@@ -23,8 +23,35 @@ main {
   color: black;
 }
 
-.denucniaInfo>h1{
-  font-size:500;
+.titulo-feedback{
+  color: var(--verde-botoes);
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+
+.denunciaInfo>div>h1{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.denunciaInfo{
+  max-width: 600px; 
+  word-wrap: break-word; 
+  margin-bottom: 20px;
+  
+}
+.denunciaInfo>p{
+  margin-bottom: 10px;
+}
+.color{
+  color: var(--verde-botoes);
+  font-weight: 800;
+}
+
+.subtitulo{
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  flex-direction: row;
 }
 #loadingDiv,
 #errordiv{
