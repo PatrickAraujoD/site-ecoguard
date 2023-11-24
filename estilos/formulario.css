@@ -23,7 +23,11 @@ form {
 label {
   margin-bottom: 10px;
 }
-
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
 textarea,
 input,
