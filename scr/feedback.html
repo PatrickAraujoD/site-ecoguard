@@ -63,16 +63,20 @@
           const denunciaInfo = document.getElementById('denunciaInfo');
           if (denunciaInfo) {
             denunciaInfo.innerHTML = `
-              <h1>Protocolo: ${denunciaData.id}</h1>
-              <h1>Denúncia sobre: ${denunciaData.tipo_de_denuncia}</h1>
-              <p>Data do Ocorrido: ${denunciaData.data_do_ocorrido}</p>
-              <p>Relato: ${denunciaData.relato}</p>
-              <p>Logradouro: ${denunciaData.logradouro}</p>
-              <p>Complemento: ${denunciaData.complemento}</p>
-              <p>Cidade: ${denunciaData.cidade}</p>
-              <p>Bairro: ${denunciaData.bairro}</p>
-              <p>Descrição do local: ${denunciaData.descricao_do_local}</p>
-              <p>Contato: ${denunciaData.contato}</p>
+              <div class="subtitulo">
+              <h1> <span class="color">Protocolo:</span> ${denunciaData.id}</h1>
+              <h1><span class="color">Status:</span> Enviado</h1>
+              </div>
+              <p><span class="color">Denúncia sobre:</span><br>${denunciaData.tipo_de_denuncia}</p>
+              <p><span class="color">Data do Ocorrido:</span><br>${denunciaData.data_do_ocorrido}</p>
+              <p><span class="color">Relato:</span><br>${denunciaData.relato}</p>
+              <p><span class="color">Logradouro:</span><br>${denunciaData.logradouro}</p>
+              <p><span class="color">Complemento:</span><br>${denunciaData.complemento}</p>
+              <p><span class="color">Cidade:</span><br>${denunciaData.cidade}</p>
+              <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
+              <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
+              <p><span class="color">Contato:</span><br>${denunciaData.contato}</p>
+              <p><span class= "color">Feedback:</span><br> Enviado</p>
             `;
           }
         } else {
