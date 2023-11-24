@@ -12,40 +12,21 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex: 1; 
+  justify-content: flex-start;
 }
 
 .cabecalho >div> a{
   color: black;
 }
-.divRodape > div > a{
-  color: black;
-}
+
 
 .titulo-feedback{
   color: var(--verde-botoes);
   margin-top: 20px; 
   margin-bottom: 10px;
-}
-
-.denunciaInfo>div>h1{
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin:10px;
-}
-.denunciaInfo{
-  max-width: 600px; 
-  word-wrap: break-word; 
-  margin-bottom: 20px;
+ 
   
-}
-.denunciaInfo>p{
-  margin-bottom: 10px;
-}
-.color{
-  color: var(--verde-botoes);
-  font-weight: 800;
 }
 
 .subtitulo{
@@ -54,6 +35,36 @@ main {
   justify-content: space-between;
   flex-direction: row;
 }
+
+.subtitulo h1:last-child {
+  margin-left: 20px;
+}
+
+.denunciaInfo{
+  max-width: 600px; 
+  word-wrap: break-word; 
+  margin-bottom: 20px;
+  
+}
+
+.denunciaInfo>div>h1{
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.denunciaInfo>p{
+  margin-bottom: 10px;
+}
+.color{
+  color: var(--verde-botoes);
+  font-weight: 800;
+}
+
+.divRodape > div > a{
+  color: black;
+}
+
 #loadingDiv,
 #errordiv{
   position: fixed;
