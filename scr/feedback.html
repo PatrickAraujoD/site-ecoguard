@@ -45,6 +45,13 @@
     async function carregarDenuncia() {
       const urlParams = new URLSearchParams(window.location.search);
       const protocolo = urlParams.get('protocolo');
+    
+      // Verificar se o protocolo está definido
+      if (!protocolo) {
+        console.error('Protocolo não definido');
+        return;
+      }
+
 
       try {
         const response = await fetch(`/obterDenuncia/${protocolo}`);
