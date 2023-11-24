@@ -44,7 +44,7 @@
   <script>
     async function carregarDenuncia() {
       const urlParams = new URLSearchParams(window.location.search);
-      const denunciaId = urlParams.get('id');
+      const denunciaId = urlParams.get('Protocolo');
 
       try {
         const response = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/obterDenuncia/${denunciaId}`);
