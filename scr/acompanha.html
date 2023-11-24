@@ -29,14 +29,14 @@
     <form action="" class="forms" onsubmit="enviarFormulario(event)">        
       <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
       <label for="Protocolo">Protocolo</label>
-      <input type="tel" inputmode="numeric" placeholder="Protocolo" id="Protocolo" name="Protocolo" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
+      <input type="tel" inputmode="numeric" placeholder="Protocolo" id="protocolo" name="protocolo" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números." required>
       <input type="submit" id="submit" class="btn" value="Entrar">
     </form>
     <script>
       async function enviarFormulario(event) {
       event.preventDefault();
   
-      const protocolo = document.getElementById('Protocolo').value;
+      const protocolo = document.getElementById('protocolo').value;
       const loadingDiv = document.getElementById('loadingDiv');
   
       if (loadingDiv) {
