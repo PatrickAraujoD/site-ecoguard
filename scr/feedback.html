@@ -44,10 +44,10 @@
   <script>
     async function carregarDenuncia() {
       const urlParams = new URLSearchParams(window.location.search);
-      const denunciaId = urlParams.get('protocolo');
+      const protocolo = urlParams.get('protocolo');
 
       try {
-        const response = await fetch(`/obterDenuncia/${denunciaId}`);
+        const response = await fetch(`/obterDenuncia/${protocolo}`);
         
         if (response.ok) {
           const denunciaData = await response.json();
