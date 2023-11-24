@@ -23,11 +23,6 @@ form {
 label {
   margin-bottom: 10px;
 }
-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
 
 textarea,
 input,
@@ -39,7 +34,10 @@ select {
   border-radius: 10px;
   outline-color: green;
   color: #4e4c4c;
-
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--cor-de-fundo);
 }
 .btn{
     position: relative;
