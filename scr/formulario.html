@@ -71,7 +71,10 @@
         event.preventDefault();
   
         const denuncia = document.getElementById('denuncia').value;
-        const data = document.getElementById('data').value;
+        const dataInput = document.getElementById('data');
+        const inputValue = dataInput.value;
+        const selectedDate = new Date(inputValue);
+        const data = selectedDate.toLocaleDateString('pt-BR');
         const relato = document.getElementById('relato').value;
         const logradouro = document.getElementById('logradouro').value;
         const complemento = document.getElementById('complemento').value;
