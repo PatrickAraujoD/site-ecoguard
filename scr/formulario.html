@@ -187,6 +187,14 @@
         // Define o valor do campo
         input.value = value;
       }
+
+      const currentYear = new Date().getFullYear();
+
+      // Format the current date to set as the max attribute
+      const today = new Date().toISOString().split('T')[0];
+  
+      // Set the max attribute of the date input
+      document.getElementById('data').setAttribute('max', `${currentYear}-12-31`);
     </script>
 
   </main>
