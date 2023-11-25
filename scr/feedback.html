@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="../assets/images/icon plata.png" type="image/x-icon"> 
   <link rel="stylesheet" type="text/css" href="../estilos/feedback.css" />
-  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
   <title>Acompanhe sua Denúcia</title>
  
 </head>
@@ -61,6 +60,11 @@
           // Exibir informações da denúncia na div denunciaInfo
           const denunciaInfo = document.getElementById('denunciaInfo');
           if (denunciaInfo) {
+            const contatoInfo = denunciaData.contato || 'Sem informações de contato';
+
+ 
+           const feedbackInfo = denunciaData.respostaemail || 'Aguardando feedback';
+
             denunciaInfo.innerHTML = `
               <div class="subtitulo">
               <h1> <span class="color">Protocolo:</span> ${denunciaData.id}</h1>
@@ -75,8 +79,8 @@
               <p><span class="color">Cidade:</span><br>${denunciaData.cidade}</p>
               <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
               <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
-              <p><span class="color">Contato:</span><br>${denunciaData.contato} || Sem informações de contato</p>
-              <p><span class= "color">Feedback:</span><br>${denunciaData.respostaemail} || Aguardando feedback</p>
+              <p><span class="color">Contato:</span><br>${contatoInfo}</p>
+              <p><span class="color">Feedback:</span><br>${feedbackInfo}</p>
             `;
           }
         } else {
