@@ -100,30 +100,7 @@
 
   // Chame a função ao carregar a página
   window.onload = carregarDenuncia;
-</script>
-
-                  <p><span class="color">Logradouro:</span><br>${denunciaData.logradouro}</p>
-                  <p><span class="color">Complemento:</span><br>${denunciaData.complemento}</p>
-                  <p><span class="color">Cidade:</span><br>${denunciaData.cidade}</p>
-                  <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
-                  <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
-                  <p><span class="color">Contato:</span><br>${denunciaData.contato}</p>
-                  <p><span class= "color">Feedback:</span><br>${data.respostaDoEmail || 'Aguardando feedback'}</p>
-                `;
-              }
-            }
-          });
-        } else {
-          console.error('Erro ao obter denúncia:', response.statusText);
-        }
-      } catch (error) {
-        console.error('Erro ao enviar a solicitação:', error);
-      }
-    }
-
-    // Chame a função ao carregar a página
-    window.onload = carregarDenuncia;
-  </script>
+</script>   
 
 </body>
 </html>
