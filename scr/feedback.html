@@ -60,10 +60,8 @@
           // Exibir informações da denúncia na div denunciaInfo
           const denunciaInfo = document.getElementById('denunciaInfo');
           if (denunciaInfo) {
-            const contatoInfo = denunciaData.contato || 'Sem informações de contato';
-
- 
-           const feedbackInfo = denunciaData.respostaemail || 'Aguardando feedback';
+            const contatoInfo = denunciaData.contato ? denunciaData.contato : 'Sem informações de contato';
+            const feedbackInfo = denunciaData.respostaemail ? denunciaData.respostaemail : 'Aguardando feedback';
 
             denunciaInfo.innerHTML = `
               <div class="subtitulo">
