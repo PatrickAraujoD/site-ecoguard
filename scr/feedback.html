@@ -43,9 +43,9 @@
     </div>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.min.js"></script>
   <script>
-    const socket = io('https://eco-guard.vercel.app');
+    const socket = io('https://eco-guard.vercel.app', { secure: true });
     
     async function carregarDenuncia() {
       const urlParams = new URLSearchParams(window.location.search);
@@ -76,8 +76,19 @@
         console.error('Erro ao enviar a solicitação:', error);
       }
     }
+      /*try{
+
+          fetch(`/api/feedback?id=${protocolo}`);
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('feedback').innerText = `Feedback: ${data.feedback}`;
+          })
+          .catch(error => console.error('Erro ao obter feedback:', error));
+      }*/
     
+
     function updateDenunciaInfo(denunciaData, feedback = 'Aguardando feedback') {
+      const sanitizedFeedback = DOMPurify.sanitize(feedback);
       const denunciaInfo = document.getElementById('denunciaInfo');
       if (denunciaInfo) {
         denunciaInfo.innerHTML = `
@@ -94,7 +105,7 @@
           <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
           <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
           <p><span class="color">Contato:</span><br>${denunciaData.contato}</p>
-          <p><span class="color">Feedback:</span><br>${feedback}</p>
+          <p><span class="color">Feedback:</span><br>${sanitizedFeedback}</p>
         `;
       }
     }
