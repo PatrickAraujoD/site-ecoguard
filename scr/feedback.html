@@ -42,36 +42,66 @@
     </div>
   </footer>
   <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
-  <script>
+<script>
   const socket = io();
-    async function carregarDenuncia() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const protocolo = urlParams.get('id');
-    
-      // Verificar se o protocolo está definido
-      if (!protocolo) {
-        console.error('Protocolo não definido');
-        return;
+
+  async function carregarDenuncia() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const protocolo = urlParams.get('id');
+
+    // Verificar se o protocolo está definido e é válido
+    if (!protocolo || isNaN(protocolo)) {
+      console.error('Protocolo não definido ou inválido');
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/obterDenuncia/${protocolo}`);
+
+      if (response.ok) {
+        const denunciaData = await response.json();
+        updateDenunciaInfo(denunciaData);
+
+        socket.on('respostaDenuncia', (data) => {
+          if (data.identificadorDenuncia === protocolo) {
+            updateDenunciaInfo(denunciaData, data.respostaDoEmail);
+          }
+        });
+      } else {
+        console.error('Erro ao obter denúncia:', response.statusText);
       }
+    } catch (error) {
+      console.error('Erro ao enviar a solicitação:', error);
+    }
+  }
 
+  function updateDenunciaInfo(denunciaData, feedback = 'Aguardando feedback') {
+    const denunciaInfo = document.getElementById('denunciaInfo');
+    if (denunciaInfo) {
+      denunciaInfo.innerHTML = `
+        <div class="subtitulo">
+          <h1> <span class="color">Protocolo:</span> ${denunciaData.id}</h1>
+          <h1><span class="color">Status:</span> Enviado</h1>
+        </div>
+        <p><span class="color">Denúncia sobre:</span><br>${denunciaData.tipo_de_denuncia}</p>
+        <p><span class="color">Data do Ocorrido:</span><br>${denunciaData.data_do_ocorrido}</p>
+        <p><span class="color">Relato:</span><br>${denunciaData.relato}</p>
+        <p><span class="color">Logradouro:</span><br>${denunciaData.logradouro}</p>
+        <p><span class="color">Complemento:</span><br>${denunciaData.complemento}</p>
+        <p><span class="color">Cidade:</span><br>${denunciaData.cidade}</p>
+        <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
+        <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
+        <p><span class="color">Contato:</span><br>${denunciaData.contato}</p>
+        <p><span class= "color">Feedback:</span><br>${data.respostaDoEmail || 'Aguardando feedback'}</p>
+        <p><span class="color">Feedback:</span><br>${feedback || 'Aguardando feedback'}}</p>
+      `;
+    }
+  }
 
-      try {
-        const response = await fetch(`https://servidor-banco-de-dados-production.up.railway.app/obterDenuncia/${protocolo}`);
-        
-        if (response.ok) {
-          const denunciaData = await response.json();
-          socket.on('respostaDenuncia', (data) => {
-            if (data.identificadorDenuncia === protocolo) {
-              const denunciaInfo = document.getElementById('denunciaInfo');
-              if (denunciaInfo) {
-                denunciaInfo.innerHTML = `
-                  <div class="subtitulo">
-                    <h1> <span class="color">Protocolo:</span> ${denunciaData.id}</h1>
-                    <h1><span class="color">Status:</span> Enviado</h1>
-                  </div>
-                  <p><span class="color">Denúncia sobre:</span><br>${denunciaData.tipo_de_denuncia}</p>
-                  <p><span class="color">Data do Ocorrido:</span><br>${denunciaData.data_do_ocorrido}</p>
-                  <p><span class="color">Relato:</span><br>${denunciaData.relato}</p>
+  // Chame a função ao carregar a página
+  window.onload = carregarDenuncia;
+</script>
+
                   <p><span class="color">Logradouro:</span><br>${denunciaData.logradouro}</p>
                   <p><span class="color">Complemento:</span><br>${denunciaData.complemento}</p>
                   <p><span class="color">Cidade:</span><br>${denunciaData.cidade}</p>
