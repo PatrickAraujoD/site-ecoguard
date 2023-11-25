@@ -188,13 +188,17 @@
         input.value = value;
       }
 
-      const currentYear = new Date().getFullYear();
+       // Get the current year
+    const currentYear = new Date().getFullYear();
 
-      // Format the current date to set as the max attribute
-      const today = new Date().toISOString().split('T')[0];
-  
-      // Set the max attribute of the date input
-      document.getElementById('data').setAttribute('max', `${currentYear}-12-31`);
+    // Format the current date as yyyy-mm-dd
+    const today = new Date().toISOString().split('T')[0];
+
+    // Set the max attribute of the date input
+    document.getElementById('data').setAttribute('max', `${currentYear}-12-31`);
+
+    // Set the value of the date input to the current date
+    document.getElementById('data').value = today;
     </script>
 
   </main>
