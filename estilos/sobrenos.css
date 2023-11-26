@@ -1,0 +1,50 @@
+@import "principal.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; 
+}
+.instagram-carousel {
+    width: 70%; /* Largura do carrossel */
+    margin: 0 auto; /* Centralizar o carrossel */
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px; /* Ajuste o tamanho conforme necessário */
+}
+
+.slick-prev {
+    left: -30px; /* Ajuste conforme necessário */
+}
+
+.slick-next {
+    right: -30px; /* Ajuste conforme necessário */
+}
+
+.instagram-image {
+    width: 90%; /* Certifique-se de que as imagens ocupem 100% da largura do contêiner */
+    height: auto; /* Adicione esta linha para garantir que a altura seja ajustada automaticamente */
+}
+p{
+    width: 90%;
+    box-sizing: border-box;
+    text-align: justify;
+
+}
+.cabecalho >div> a{
+  color: black;
+}
+.divRodape > div > a{
+    color: black;
+  }
