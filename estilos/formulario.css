@@ -23,18 +23,10 @@ form {
 label {
   margin-bottom: 10px;
 }
-#data{
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  width: 100%;
-  padding: 10px;
-  
-}
+
 textarea,
 input,
 select {
-  display: block;
-  text-align: left;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
@@ -46,6 +38,14 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: var(--cor-de-fundo);
+}
+#data{
+  display: block;
+  text-align: left;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-width: 100%;
+
 }
 .btn{
     position: relative;
