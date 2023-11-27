@@ -1,9 +1,9 @@
 @import "principal.css";
 
-.nome>a{
-  color: black;
+.cabecalho {
+  
+  height: 100px;
 }
-
 .primary{
   display: flex;
   flex-direction: column;
