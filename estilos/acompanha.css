@@ -7,7 +7,6 @@ body {
   margin: 0;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -16,8 +15,8 @@ main {
   flex: 1; 
 }
 
-.cabecalho >div> a{
-  color: black;
+.cabecalho {
+  height: 100px;
 }
 
 .titulo{
@@ -27,6 +26,7 @@ main {
 }
 
 .forms{
+  
   display: flex;
   flex-direction: column;
   max-width: 380px;
