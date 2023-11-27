@@ -14,7 +14,16 @@ main {
   align-items: center;
   justify-content: center;
   flex: 1; 
+
 }
+
+
+.sobrenos> p {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+
 .instagram-carousel {
     width: 70%; /* Largura do carrossel */
     margin: 0 auto; /* Centralizar o carrossel */

@@ -201,10 +201,7 @@ main {
     text-align: justify;
   }
 
-  .valores > p {
-    margin-top: 20px;
-    font-size: 16px;
-  }
+  
 }
 
 @media (min-width: 768px) {
