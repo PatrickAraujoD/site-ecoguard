@@ -39,16 +39,7 @@ select {
   -moz-appearance: none;
   background-color: var(--cor-de-fundo);
 }
-#data{
-  text-align: left;
-  position: relative;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  min-width: 90%;
-  padding: 40px;
- 
 
-}
 .btn{
     position: relative;
     width: 50%;
