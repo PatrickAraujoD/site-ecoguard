@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../assets/images/icon plata.png" type="image/x-icon"> 
+  <link rel="shortcut icon" href="../assets/images/iconplanta.png" type="image/x-icon"> 
   <link rel="stylesheet" type="text/css" href="../estilos/formulario.css" />
   <title>Formulário de Denúncia</title>
  
@@ -29,7 +29,7 @@
       <a href="../index.html"><img src="../assets/images/setaesquerda.png" alt="seta apontada para esquerda"></a>
     </div>
     <div class="logo">
-      <a href="../index.html"><img src="../assets/images/image 78.svg" alt="símbolo de reciclagem"></a>
+      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="símbolo de reciclagem"></a>
       <div class="logonome">
         <a href="../index.html"><h1>ECO</h1></a>
         <a href="../index.html"><h1 class="planet">GUARD</h1></a>
@@ -41,7 +41,7 @@
     <form id="meuFormulario" onsubmit="enviarFormulario(event)">
       <label for="denuncia">Qual sua denúncia</label>
       <select name="denuncia" id="denuncia" required>
-        <option value="Trafico de animais silvestres">Tráfico de animais silvestres</option>
+        <option value="Tráfico de animais silvestres">Tráfico de animais silvestres</option>
         <option value="Poluição">Poluição</option>
         <option value="Desmatamento">Desmatamento</option>
         <option value="Queimadas">Queimadas</option>
@@ -53,11 +53,11 @@
       <label for="logradouro">Logradouro</label>
       <input type="text" name="logradouro" id="logradouro" required>
       <label for="complemento">Complemento</label>
-      <input type="text" name="complemento" id="complemento">
+      <input type="text" name="complemento" id="complemento" required>
       <div>
         <div><label for="cidade">Cidade</label>
         <select name="cidade" id="cidade">
-          <option value="saoluis">São Luís</option>
+          <option value="São luís">São Luís</option>
         </select>
         </div>
         <div>
@@ -66,9 +66,9 @@
         </div>
       </div>
       <label for="descricaoLocal">Descrição do Local</label>
-      <textarea name="descricaoLocal" id="descricaoLocal" cols="30" rows="10"></textarea>
+      <textarea name="descricaoLocal" id="descricaoLocal" cols="30" rows="10" required></textarea>
       <label for="contato">Contatos</label>
-      <input type="tel" inputmode="numeric" placeholder="Telefone" id="contatos" name="contatos" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" title="Por favor, insira apenas números.">
+      <input type="tel" inputmode="numeric" placeholder="Telefone" id="contatos" name="contatos"  oninput="applyPhoneMask(this)" title="Por favor, insira apenas números.">
       <button type="submit" class="btn">Enviar</button>
     </form>
     <script>
@@ -76,7 +76,10 @@
         event.preventDefault();
   
         const denuncia = document.getElementById('denuncia').value;
-        const data = document.getElementById('data').value;
+        const dataInput = document.getElementById('data');
+        const inputValue = dataInput.value;
+        const selectedDate = new Date(inputValue);
+        const data = selectedDate.toLocaleDateString('pt-BR');
         const relato = document.getElementById('relato').value;
         const logradouro = document.getElementById('logradouro').value;
         const complemento = document.getElementById('complemento').value;
@@ -177,13 +180,42 @@
        window.location.href = window.location.href;
 
       }
-  
+      function applyPhoneMask(input) {
+        // Remove todos os caracteres não numéricos
+        var value = input.value.replace(/\D/g, '');
+      
+        // Aplica a máscara (XX) XXXX-XXXX
+        if (value.length >= 2) {
+          value = '(' + value.substring(0, 2) + ')' + value.substring(2);
+        }
+        if (value.length >= 10) {
+          value = value.substring(0, 9) + '-' + value.substring(9, 13);
+        }
+      
+        // Define o valor do campo
+        input.value = value;
+      }
+
+       // Get the current year
+    const currentYear = new Date().getFullYear();
+
+    // Format the current date as yyyy-mm-dd
+    const today = new Date().toISOString().split('T')[0];
+
+    // Set the max attribute of the date input
+    document.getElementById('data').setAttribute('max', `${currentYear}-12-31`);
+
+    // Set the value of the date input to the current date
+    document.getElementById('data').value = today;
+
+
+
     </script>
 
   </main>
   <footer>
     <div class="divRodape">
-      <a href="../index.html"><img src="../assets/images/image 78.svg" alt="simbolo de reciclagem"></a>        
+      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo de reciclagem"></a>        
       <div>   
         <a href="../index.html"><h1>ECO</h1></a>
         <a href="../index.html"><h1 class="planet">GUARD</h1></a>
