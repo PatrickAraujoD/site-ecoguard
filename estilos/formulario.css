@@ -44,7 +44,8 @@ select {
   text-align: left;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  min-width: 100%;
+  min-width: 90%;
+  padding: 10px;
 
 }
 .btn{
