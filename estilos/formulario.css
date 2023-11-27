@@ -11,6 +11,9 @@ form {
   margin: 10px auto 40px auto;
   font-weight: 600;
 }
+.cabecalho {
+  height: 100px;
+}
 .cabecalho > div > a {
   color: #000;
 }
