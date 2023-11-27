@@ -37,7 +37,7 @@ select {
   outline-color: green;
   color: #4e4c4c;
   appearance: none;
-  -webkit-appearance: none;
+  -webkit-appearance: textfield;
   -moz-appearance: none;
   background-color: var(--cor-de-fundo);
 }
