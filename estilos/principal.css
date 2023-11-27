@@ -126,9 +126,10 @@ footer {
   align-items: center;
 }
 
-.divRodape > img{
-  width: 27px;
+.divRodape > a> img{
+  max-width: 60px;
 }
+
 
 .divRodape > div > h1 {
   font-size: 20px;
