@@ -23,7 +23,13 @@ form {
 label {
   margin-bottom: 10px;
 }
-
+#data{
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  width: 100%;
+  padding: 10px;
+  
+}
 textarea,
 input,
 select {
@@ -37,7 +43,7 @@ select {
   outline-color: green;
   color: #4e4c4c;
   appearance: none;
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
   -moz-appearance: none;
   background-color: var(--cor-de-fundo);
 }
