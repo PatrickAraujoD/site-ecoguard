@@ -126,7 +126,7 @@ footer {
   align-items: center;
 }
 
-.divRodape > img {
+.divRodape > a{
   width: 47px;
 }
 
