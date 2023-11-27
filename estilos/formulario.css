@@ -27,6 +27,7 @@ label {
 textarea,
 input,
 select {
+  text-align: left;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
