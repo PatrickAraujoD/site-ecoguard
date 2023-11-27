@@ -3,6 +3,9 @@
 main {
   z-index: 1;
 }
+.cabecalho > img{
+  max-width: 70px;
+}
 
 .primary {
   display: flex;
