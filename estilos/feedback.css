@@ -20,18 +20,28 @@ main {
   color: black;
 }
 
+.informacoesdenuncia {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px 10px 50px;
+  width: 80%;
+  background-color: var(--cor-de-fundo);
+  border: 2px solid var(--verde-botoes);
+  border-radius: 20px;
+  margin: 40px auto 40px auto;
+  font-weight: 600;
+}
 
 .titulo-feedback{
   color: var(--verde-botoes);
   margin-top: 20px; 
   margin-bottom: 10px;
- 
+  text-align: center;
   
 }
 
 .subtitulo{
   display: flex;
-  margin: auto;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -41,7 +51,6 @@ main {
 }
 
 .denunciaInfo{
-  max-width: 80%; 
   word-wrap: break-word; 
   margin-bottom: 20px;
   
@@ -89,9 +98,8 @@ margin: 10px 0;
 border: 2px solid #4CAF50; 
 }
 @media (min-width: 1024px) {
-  .denunciaInfo {
-    max-width: 700px;
-    
+  .informacoesdenuncia {
+    max-width: 50%;
   }
-  
+
 }
