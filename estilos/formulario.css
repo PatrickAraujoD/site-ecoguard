@@ -41,7 +41,7 @@ select {
 }
 #data{
   text-align: left;
-  position: fixed;
+  position: relative;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   min-width: 90%;
