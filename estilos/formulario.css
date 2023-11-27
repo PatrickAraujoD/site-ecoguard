@@ -40,12 +40,13 @@ select {
   background-color: var(--cor-de-fundo);
 }
 #data{
-  display: block;
   text-align: left;
+  position: fixed;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   min-width: 90%;
-  margin: 20px;
+  padding: 20px;
+ 
 
 }
 .btn{
