@@ -60,7 +60,7 @@
             }
 
             const responseData = await response.json();
-            const url = `/scr/feedback.html?id=${responseData.id}`;
+            const url = `/src/feedback.html?id=${responseData.id}`;
             window.location.href = url;
           } else {
             console.error('Erro ao obter denúncia:', response.statusText);
