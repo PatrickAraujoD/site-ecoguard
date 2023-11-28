@@ -127,8 +127,13 @@ footer {
 }
 
 .divRodape > a> img{
-  max-width: 60px;
-  margin-right: 10px;
+  max-width: 45px;
+  margin-right: 5px;
+}
+
+.divRodape > img{
+  max-width: 45px;
+  margin-right: 5px;
 }
 
 
@@ -143,3 +148,26 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
+.divRodape  >div>h1{
+  font-size: 25px;
+}
+
+@media (min-width: 798px) {
+  .divRodape > a> img{
+    max-width: 60px;
+    margin-right: 10px;
+  }
+
+  .divRodape > img{
+    max-width: 60px;
+    margin-right: 10px;
+  }
+  
+  .divRodape  >div>h1{
+    font-size: 32px;
+  }
+  
+}
+
+
+

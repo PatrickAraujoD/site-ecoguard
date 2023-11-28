@@ -130,10 +130,7 @@ main {
   font-size: 17px;
   text-align: justify;
 }
-.divRodape>img{
-  max-width: 60px;
-  margin-right: 10px;
-}
+
 
 
 @media (min-width: 1024px) {
@@ -209,6 +206,8 @@ main {
     font-size: 26px;
     text-align: justify;
   }
+
+
 
 
 
