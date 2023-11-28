@@ -151,7 +151,9 @@ footer {
 .divRodape  >div>h1{
   font-size: 25px;
 }
-
+.divRodape  >div>a>h1{
+  font-size: 25px;
+}
 @media (min-width: 798px) {
   .divRodape > a> img{
     max-width: 60px;
@@ -164,6 +166,9 @@ footer {
   }
   
   .divRodape  >div>h1{
+    font-size: 32px;
+  }
+  .divRodape  >div>a>h1{
     font-size: 32px;
   }
   
