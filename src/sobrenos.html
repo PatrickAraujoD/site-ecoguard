@@ -7,11 +7,10 @@
   <link rel="shortcut icon" href="../assets/images/iconplanta.png" type="image/x-icon"> 
   <link rel="stylesheet" type="text/css" href="../estilos/sobrenos.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <title>Formulário de Denúncia</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <title>Sobre nós</title>
  
 </head>
 <body>
@@ -28,14 +27,21 @@
     </div>
   </header>
   <main>
-    <h1>Sobre nós</h1>
     <div class="sobrenos">
-        <p>A plataforma conta com diversos recursos necessários para denunciar atividades prejudiciais ao meio ambiente e promover mudança positiva. Estamos comprometidos com transparência e a responsabilidade, e a creditamos que a colaboração é a chave para criar um mundo mais sustentável.</p>
+      <h2>Sobre nós</h2>
+      <h1>A plataforma conta com diversos recursos necessários para denunciar atividades prejudiciais ao meio ambiente e promover mudança positiva. Estamos comprometidos com transparência e a responsabilidade, e a creditamos que a colaboração é a chave para criar um mundo mais sustentável. Nosso compromisso é proteger o meio ambiente, fornecendo uma plataforma para denúncias ambientais em São Luís e promovendo conscientização sobre questões ambientais. Acreditamos que a colaboração é essencial para criar um mundo mais sustentável.</h1>
+      <h1>O objetivo principal do nosso site é oferecer uma maneira fácil e eficiente para a comunidade de São Luís realizar denúncias de atividades prejudiciais ao meio ambiente. Além disso, buscamos promover a conscientização ambiental, fornecendo informações educativas e recursos para encontrar pontos de entrega voluntária.</h1>
     </div>
+    <div class="redessociais">
+      <h2>Acompanhe nossas redes Sociais</h2>
+      <h1>Acompanhe-nos nas redes sociais para ficar atualizado sobre eventos ambientais, receber dicas de sustentabilidade e participar de iniciativas comunitárias. Estamos ativos no Instagram e Twitter, onde compartilhamos informações relevantes e promovemos ações para um mundo mais verde.</h1>
+    </div>
+
     <div id="instagram-feed" class="instagram-carousel"></div>
     
   </main>
   <script>
+  $(document).ready(function () {
     function fetchData(url, callback) {
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function () {
@@ -49,78 +55,97 @@
     }
 
     fetchData('https://servidor-banco-de-dados-production.up.railway.app/getInstagramFeed', function (instagramData) {
-        console.log(instagramData);
+      console.log(instagramData);
 
-        const instagramFeedElement = $('#instagram-feed');
+      const instagramFeedElement = $('#instagram-feed');
 
-        // Limpe o conteúdo existente (se houver)
-        instagramFeedElement.html('');
+      // Limpe o conteúdo existente (se houver)
+      instagramFeedElement.html('');
 
-        // Verifique se há dados de publicações
-        if (instagramData.data && instagramData.data.length > 0) {
-            // Itere sobre as publicações e exiba na página
-            instagramData.data.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.classList.add('instagram-post');
+      // Verifique se há dados de publicações
+      if (instagramData.data && instagramData.data.length > 0) {
+        // Itere sobre as publicações e exiba na página
+        instagramData.data.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.classList.add('instagram-post');
 
-                if (post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') {
-                    // Crie elementos de imagem para imagens e álbuns
-                    createImageElements(post, postElement);
-                }
+          if (post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') {
+            // Crie elementos de imagem para imagens e álbuns
+            createImageElements(post, postElement);
+          }
 
-                // Adicione o caption abaixo da imagem
-                const captionElement = document.createElement('p');
-                captionElement.innerText = post.caption;
-                postElement.appendChild(captionElement);
+          // Adicione o caption abaixo da imagem
+          const captionElement = document.createElement('p');
+          captionElement.innerText = post.caption;
+          postElement.appendChild(captionElement);
 
-                instagramFeedElement.append(postElement);
-            });
+          instagramFeedElement.append(postElement);
+        });
 
-            // Inicialize o Slick Carousel após adicionar as imagens
-            instagramFeedElement.slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                dots: true
-            });
+        // Inicialize o Slick Carousel após adicionar as imagens
+        instagramFeedElement.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: true,
+          dots: true,
+          responsive: [
+            {
+              breakpoint: 768, // Largura de tela 768px e abaixo
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
 
-            // Adicione um evento de clique nas imagens para abrir a publicação
-            instagramFeedElement.on('click', '.instagram-image', function() {
-                const postIndex = $(this).parent().index();
-                const postLink = instagramData.data[postIndex].permalink;
-                window.open(postLink, '_blank');
-            });
-        } else {
-            // Caso não haja publicações
-            instagramFeedElement.html('<p>Nenhuma publicação encontrada.</p>');
-        }
+        // Adicione um evento de clique nas imagens para abrir a publicação
+        instagramFeedElement.on('click', '.instagram-image', function () {
+          const slickIndex = $(this).attr('data-slick-index');
+          const postLink = instagramData.data[slickIndex].permalink;
+          window.open(postLink, '_blank');
+        });
+
+        // Adicione um ouvinte para o evento afterChange do Slick Carousel
+        instagramFeedElement.on('afterChange', function (event, slick, currentSlide) {
+          // Atualiza o índice da imagem ativa
+          $('.instagram-image').attr('data-slick-index', currentSlide);
+        });
+
+      } else {
+        // Caso não haja publicações
+        instagramFeedElement.html('<p>Nenhuma publicação encontrada.</p>');
+      }
     });
 
     function createImageElements(post, postElement) {
-        // Verifique se há imagens no álbum
-        if (post.media_type === 'CAROUSEL_ALBUM' && post.children && post.children.data && post.children.data.length > 0) {
-            post.children.data.forEach(albumImage => {
-                const imageElement = document.createElement('img');
-                imageElement.src = albumImage.media_url;
-                imageElement.alt = 'Instagram Album Image';
-                imageElement.classList.add('instagram-image');
-                postElement.appendChild(imageElement);
-            });
-        } else {
-            // Crie um elemento de imagem para imagens individuais
-            const imageElement = document.createElement('img');
-            imageElement.src = post.media_url;
-            imageElement.alt = 'Instagram Image';
-            imageElement.classList.add('instagram-image');
-            postElement.appendChild(imageElement);
-        }
+      // Verifique se há imagens no álbum
+      if (post.media_type === 'CAROUSEL_ALBUM' && post.children && post.children.data && post.children.data.length > 0) {
+        post.children.data.forEach(albumImage => {
+          const imageElement = document.createElement('img');
+          imageElement.src = albumImage.media_url;
+          imageElement.alt = 'Instagram Album Image';
+          imageElement.classList.add('instagram-image');
+          postElement.appendChild(imageElement);
+        });
+      } else {
+        // Crie um elemento de imagem para imagens individuais
+        const imageElement = document.createElement('img');
+        imageElement.src = post.media_url;
+        imageElement.alt = 'Instagram Image';
+        imageElement.classList.add('instagram-image');
+        postElement.appendChild(imageElement);
+      }
     }
+  });
+</script>
 
-    
-    
-  </script>
+  
+  
+  
+  
   <footer>
     <div class="divRodape">
         <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo de reciclagem"></a>        
