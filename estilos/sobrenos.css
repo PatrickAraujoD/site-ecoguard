@@ -17,43 +17,109 @@ main {
 
 }
 
+.cabecalho {
+  height: 100px;
+}
 
-.sobrenos> p {
-    margin-top: 20px;
-    font-size: 16px;
-  }
+.sobrenos>  h1 {
+  margin: 0 90px 0 90px;
+
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.sobrenos>  h2 {
+  text-align: center;
+  Color:var(--verde-botoes);
+  margin-top: 20px;
+
+}
+
+.redessociais > h1{
+  margin: 10px 90px 0 90px;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+  text-align: justify;
+}
+.redessociais > h2{
+  margin: 10px 90px 0 90px;
+  text-align: center;
+  Color:var(--verde-botoes);
+}
 
 
 .instagram-carousel {
-    width: 70%; /* Largura do carrossel */
-    margin: 0 auto; /* Centralizar o carrossel */
+  margin-top: 20px;
+  width: 60%; /* Largura do carrossel */
 }
 
 .slick-prev, .slick-next {
-    font-size: 24px; /* Ajuste o tamanho conforme necessário */
+  font-size: 24px; 
 }
 
 .slick-prev {
-    left: -30px; /* Ajuste conforme necessário */
+  left: -30px; /* Ajuste conforme necessário */
 }
 
 .slick-next {
-    right: -30px; /* Ajuste conforme necessário */
+  right: -30px; /* Ajuste conforme necessário */
 }
 
 .instagram-image {
+  width: 100%; 
+  height: auto; 
+  padding: 10px;
+  background-color: var(--cor-de-fundo-destaque);
+}
+
+p{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: justify;
+  background-color: var(--cor-de-fundo-destaque);
+  height: 310px;
+
+}
+
+
+
+@media (min-width: 798px) {
+  .redessociais > h2{
+    margin: 10px 90px 0 90px;
+  }
+  
+  .instagram-carousel {
+    
+    width: 70%; /* Largura do carrossel */
+
+  }
+  
+  .slick-prev, .slick-next {
+    font-size: 24px; 
+  }
+  
+  .slick-prev {
+    left: -30px; /* Ajuste conforme necessário */
+  }
+  
+  .slick-next {
+    right: -30px; /* Ajuste conforme necessário */
+  }
+  
+  .instagram-image {
     width: 90%; /* Certifique-se de que as imagens ocupem 100% da largura do contêiner */
     height: auto; /* Adicione esta linha para garantir que a altura seja ajustada automaticamente */
-}
-p{
+
+  }
+  p{
     width: 90%;
     box-sizing: border-box;
     text-align: justify;
-
-}
-.cabecalho >div> a{
-  color: black;
-}
-.divRodape > div > a{
-    color: black;
+    height: 310px;
+  
   }
+}
