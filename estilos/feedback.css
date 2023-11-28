@@ -16,6 +16,9 @@ main {
   justify-content: flex-start;
 }
 
+.cabecalho {
+  height: 100px;
+}
 .cabecalho >div> a{
   color: black;
 }
