@@ -5,6 +5,7 @@ main {
 }
 .cabecalho > img{
   max-width: 70px;
+  margin-right: 10px;
 }
 
 .primary {
@@ -129,6 +130,11 @@ main {
   font-size: 17px;
   text-align: justify;
 }
+.divRodape>img{
+  max-width: 60px;
+  margin-right: 10px;
+}
+
 
 @media (min-width: 1024px) {
   header {
@@ -151,8 +157,8 @@ main {
   }
   
   .imgPlaneta {
-    max-width: 400px;
-    max-height: 400px;
+    min-width: 400px;
+    max-height: 500px;
     border-radius: 5px;
     display: block;
   }
@@ -204,8 +210,10 @@ main {
     text-align: justify;
   }
 
-  
+
+
 }
+
 
 @media (min-width: 768px) {
   .primary {

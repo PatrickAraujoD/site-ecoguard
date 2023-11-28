@@ -53,7 +53,7 @@ main{
 .logo img {
   width: 50px; 
   height: auto;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .logo>div>a{
@@ -128,13 +128,9 @@ footer {
 
 .divRodape > a> img{
   max-width: 60px;
+  margin-right: 10px;
 }
 
-
-.divRodape > div > h1 {
-  font-size: 20px;
-  margin-left: 5px;
-}
 
 .divRodape > div > h1:last-child {
   color: var(--cor-de-letra);
