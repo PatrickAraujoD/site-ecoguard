@@ -1,0 +1,100 @@
+@import 'principal.css';
+
+header .nome h1:first-child{
+    color: var(--verde-botoes);
+}
+
+main{
+    padding: 50px;
+}
+
+.contener-conheca-leis{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.contener-conheca-leis h2{
+    font-size: 18px;
+}
+
+.contener-conheca-leis h2 span{
+    color: var(--verde-botoes);
+}
+
+.contener-conheca-leis h1{
+    font-size: 35px;
+}
+
+.quadro-de-leis{
+    background-color: var(--cor-de-fundo);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--verde-botoes);
+    margin-bottom: 50px;
+}
+
+.quadro-de-leis .leis{
+    text-align: center;
+    color: var(--verde-botoes);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.quadro-de-leis .divisao{
+    background-color: var(--verde-botoes);
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+.leis-ambientais{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.leis-ambientais li a{
+    color: var(--verde-botoes);
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.leis-ambientais li a:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.quem-recorrer{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quem-recorrer div{
+    border: 2px solid var(--verde-botoes);
+    margin-left: 50px;
+    width: 550px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.quem-recorrer div h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--verde-botoes);
+}
+
+.quem-recorrer div p span{
+    font-weight: bold;
+}
