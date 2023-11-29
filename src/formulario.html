@@ -12,6 +12,8 @@
 <body>
   <div id="loadingDiv" style="display: none;">
     <p>Enviando denúncia. Aguarde...</p>
+    <p>Guarde esse protocolopara acompanhar sua denúncia</p>
+    <button class="btn" id="AcompanharDenuncia" onclick="acompanharDenuncia()">Acompanhar</button>
     <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
   </div>
   <div id="errordiv" style="display: none;">
@@ -166,8 +168,15 @@
           loadingDiv.style.display = 'none';
         }
 
-
       }
+
+      function acompanharDenuncia() {
+        document.body.style.opacity = 0;
+        setTimeout(function () {
+            window.location.href = 'acompanha.html';
+        }, 100); 
+      }
+      
       function fecharMensagem() {
         // Oculta a div de sucesso
         const successDiv = document.getElementById('successDiv');
