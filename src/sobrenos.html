@@ -74,11 +74,6 @@
             createImageElements(post, postElement);
           }
 
-          // Adicione o caption abaixo da imagem
-          const captionElement = document.createElement('p');
-          captionElement.innerText = post.caption;
-          postElement.appendChild(captionElement);
-
           instagramFeedElement.append(postElement);
         });
 
@@ -92,7 +87,14 @@
           dots: true,
           responsive: [
             {
-              breakpoint: 768, // Largura de tela 768px e abaixo
+              breakpoint: 1024, // Largura de tela 1024px e abaixo
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 798, // Largura de tela 798px e abaixo
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -101,18 +103,6 @@
           ]
         });
 
-        // Adicione um evento de clique nas imagens para abrir a publicação
-        instagramFeedElement.on('click', '.instagram-image', function () {
-          const slickIndex = $(this).attr('data-slick-index');
-          const postLink = instagramData.data[slickIndex].permalink;
-          window.open(postLink, '_blank');
-        });
-
-        // Adicione um ouvinte para o evento afterChange do Slick Carousel
-        instagramFeedElement.on('afterChange', function (event, slick, currentSlide) {
-          // Atualiza o índice da imagem ativa
-          $('.instagram-image').attr('data-slick-index', currentSlide);
-        });
 
       } else {
         // Caso não haja publicações
@@ -121,24 +111,43 @@
     });
 
     function createImageElements(post, postElement) {
-      // Verifique se há imagens no álbum
-      if (post.media_type === 'CAROUSEL_ALBUM' && post.children && post.children.data && post.children.data.length > 0) {
-        post.children.data.forEach(albumImage => {
-          const imageElement = document.createElement('img');
-          imageElement.src = albumImage.media_url;
-          imageElement.alt = 'Instagram Album Image';
-          imageElement.classList.add('instagram-image');
-          postElement.appendChild(imageElement);
-        });
-      } else {
-        // Crie um elemento de imagem para imagens individuais
-        const imageElement = document.createElement('img');
-        imageElement.src = post.media_url;
-        imageElement.alt = 'Instagram Image';
-        imageElement.classList.add('instagram-image');
-        postElement.appendChild(imageElement);
-      }
-    }
+  // Crie um elemento de âncora (hiperlink)
+  const anchorElement = document.createElement('a');
+  anchorElement.href = post.permalink;
+
+  // Crie um elemento de imagem e anexe ao elemento de âncora
+  const containerElement = document.createElement('div');
+  containerElement.classList.add('post-container');
+
+  // Crie um elemento de imagem e anexe ao contêiner
+  const imageElement = document.createElement('img');
+  imageElement.src = post.media_url;
+  imageElement.alt = 'Instagram Image';
+  imageElement.classList.add('instagram-image');
+
+  anchorElement.appendChild(imageElement);
+  containerElement.appendChild(anchorElement);
+
+  const textContainer = document.createElement('div');
+  textContainer.classList.add('text-container');
+  // Adicione o caption ao contêiner de texto
+  const anchorElemento = document.createElement('a');
+  anchorElemento.href = post.permalink;
+  const captionElement = document.createElement('p');
+  captionElement.innerText = post.caption;
+  anchorElemento.appendChild(captionElement);
+  textContainer.appendChild(anchorElemento);
+
+  // Adicione o contêiner de texto ao contêiner principal
+  containerElement.appendChild(textContainer);
+
+  // Adicione o contêiner principal ao elemento da postagem
+  postElement.appendChild(containerElement);
+
+  // Adicione espaçamento abaixo de cada contêiner
+  containerElement.style.marginBottom = '20px'; // Ajuste conforme necessário
+}
+
   });
 </script>
 

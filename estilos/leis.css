@@ -4,9 +4,20 @@ header .nome h1:first-child{
     color: var(--verde-botoes);
 }
 
-main{
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  
+  main {
     padding: 50px;
-}
+
+    flex: 1; 
+  }
 .cabecalho {
   height: 100px;
 }
@@ -28,8 +39,13 @@ main{
 
 .contener-conheca-leis h1{
     font-size: 35px;
+    text-align: center;
 }
 
+.contener-conheca-leis p{
+    padding: 15px;
+    text-align: justify;
+}
 .quadro-de-leis{
     background-color: var(--cor-de-fundo);
     padding: 30px;
@@ -61,8 +77,10 @@ main{
 }
 
 .leis-ambientais li a{
+    display: flex;
     color: var(--verde-botoes);
     cursor: pointer;
+    text-align: center;
     font-weight: bold;
     border: 2px solid transparent;
     transition: border 0.5s ease;
@@ -76,27 +94,95 @@ main{
 }
 
 .quem-recorrer{
+    width: 100%;
+}
+
+.divprincipal{
     display: flex;
-    flex-direction: row;    
+    flex: 1;
     flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
 }
 
-.quem-recorrer div{
-    border: 2px solid var(--verde-botoes);
-    margin-left: 50px;
-    width: 550px;
-    margin-bottom: 40px;
-    border-radius: 5px;
+.container{
+    background-color: transparent;
     padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--verde-botoes);
+    border-radius: 5px;
 }
 
-.quem-recorrer div h4{
-    margin-bottom: 10px;
+.container> h4{
+    text-align: center;
+    margin: 20px 20px 0 20px;
     font-size: 20px;
     color: var(--verde-botoes);
 }
-
-.quem-recorrer div p span{
+.container p {
+    text-align: justify;
+    padding: 20px;
+}
+.container p span{
     font-weight: bold;
 }
+
+@media (min-width: 1024px) {
+  
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 250px;
+        max-width: 600px;
+        min-height: 400px;
+    }
+    .divprincipal {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+  
+  }
+  
+  
+  @media (min-width: 768px) {
+   
+   
+    .container{
+      margin-left: 5px;
+      margin-right: 5px;
+      min-width: 250px;
+      min-height:600px;
+      flex-direction: column;
+      display: flex;
+    }
+    .container > h4{
+        text-align: center;
+        font-size: 20px;
+        color: var(--verde-botoes);
+    } 
+    .container p {
+        text-align: justify;
+        padding: 5px;
+    }
+  
+    .divprimeira {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    
+    }
+    .divsegunda{
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  
+  }
+  
