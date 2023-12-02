@@ -28,7 +28,7 @@ async function enviarFormulario(event) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        denuncia,
+        tipodedenuncia,
         data,
         relato,
         logradouro,
