@@ -10,22 +10,6 @@
  
 </head>
 <body>
-  <div id="loadingDiv" style="display: none;">
-    <p>Enviando denúncia. Aguarde...</p>
-    <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
-  </div>
-  <div id="errordiv" style="display: none;">
-    <p>Erro ao enviar denúncia. Tente novamente...</p>
-    <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
-  </div>
-  <div id="successDiv" style="display: none;">
-    <p>Denúncia enviada com sucesso</p>
-    <p id="protocoloMensagem"></p>
-    <p>Guarde esse protocolo para acompanhar sua denúncia</p>
-    <button class="btn" id="AcompanharDenuncia" onclick="acompanharDenuncia()">Acompanhar Denúncia</button>
-    <button class="btn" id="fecharMensagem" onclick="fecharMensagem()">Fechar</button>
-
-  </div>
   <header class="cabecalho">
     <div class="setaesquerda">
       <a href="../index.html"><img src="../assets/images/setaesquerda.png" alt="seta apontada para esquerda"></a>
@@ -33,8 +17,8 @@
     <div class="logo">
       <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="símbolo de reciclagem"></a>
       <div class="logonome">
-        <a href="../index.html"><h1>ECO</h1></a>
-        <a href="../index.html"><h1 class="planet">GUARD</h1></a>
+        <a href="../index.html"><span>ECO</span></a>
+        <a href="../index.html"><span class="planet">GUARD</span></a>
       </div>
     </div>
   </header>
@@ -68,13 +52,29 @@
       <input type="tel" inputmode="numeric" placeholder="Telefone" id="contatos" name="contatos"  oninput="applyPhoneMask(this)" title="Por favor, insira apenas números.">
       <button type="submit" class="btn">Enviar</button>
     </form>
+    <div id="loadingDiv" style="display: none;">
+      <p>Enviando denúncia. Aguarde...</p>
+      <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
+    </div>
+    <div id="errordiv" style="display: none;">
+      <p>Erro ao enviar denúncia. Tente novamente...</p>
+      <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
+    </div>
+    <div id="successDiv" style="display: none;">
+      <p>Denúncia enviada com sucesso</p>
+      <p id="protocoloMensagem"></p>
+      <p>Guarde esse protocolo para acompanhar sua denúncia</p>
+      <button class="btn" id="AcompanharDenuncia" onclick="acompanharDenuncia()">Acompanhar</button>
+      <button class="btn" id="fecharMensagem" onclick="fecharMensagem()">Fechar</button>
+  
+    </div>
   </main>
   <footer>
     <div class="divRodape">
       <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo de reciclagem"></a>        
       <div>   
-        <a href="../index.html"><h1>ECO</h1></a>
-        <a href="../index.html"><h1 class="planet">GUARD</h1></a>
+        <a href="../index.html"><span>ECO</span></a>
+        <a href="../index.html"><span class="planet">GUARD</span></a>
       </div>
     </div>
     <div> 

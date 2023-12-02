@@ -10,27 +10,30 @@
  
 </head>
 <body>
-  <div id="loadingDiv" style="display: none;">
-    <p>Procurando sua denúncia. Aguarde...</p>
-    <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
-  </div>
-  <div id="errordiv" style="display: none;">
-    <p>Erro ao localizar sua denúncia. Tente novamente...</p>
-    <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
-  </div>
+  
   <header class="cabecalho">
-     <div class="setaesquerda">
+    <div class="setaesquerda">
       <a href="../index.html"><img src="../assets/images/setaesquerda.png" alt="seta apontada para esquerda"></a>
     </div>
     <div class="logo">
       <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="símbolo de reciclagem"></a>
       <div class="logonome">
-        <a href="../index.html"><h1>ECO</h1></a>
-        <a href="../index.html"><h1 class="planet">GUARD</h1></a>
+        <a href="../index.html"><span>ECO</span></a>
+        <a href="../index.html"><span class="planet">GUARD</span></a>
       </div>
     </div>
   </header>
   <main>
+
+    <div id="loadingDiv" style="display: none;">
+      <p>Procurando sua denúncia. Aguarde...</p>
+      <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
+    </div>
+    <div id="errordiv" style="display: none;">
+      <p>Erro ao localizar sua denúncia. Tente novamente...</p>
+      <button class="btn" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
+    </div>
+
     <form action="" class="forms" onsubmit="enviarFormulario(event)">        
       <h1 class="titulo">Acompanhe sua Denúncia aqui</h1>
       <label for="Protocolo">Protocolo</label>
@@ -39,12 +42,12 @@
     </form>
     <script src="../scripts/acompanha.js"></script>
     </main>
-  <footer>
+   <footer>
     <div class="divRodape">
       <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo de reciclagem"></a>        
       <div>   
-        <a href="../index.html"><h1>ECO</h1></a>
-        <a href="../index.html"><h1 class="planet">GUARD</h1></a>
+        <a href="../index.html"><span>ECO</span></a>
+        <a href="../index.html"><span class="planet">GUARD</span></a>
       </div>
     </div>
     <div> 
