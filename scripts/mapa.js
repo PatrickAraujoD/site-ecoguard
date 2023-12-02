@@ -17,10 +17,7 @@ function initializeMap(latitude, longitude) {
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-
-    
+    }).addTo(map);   
 }
 
 function success(pos) {
@@ -201,16 +198,11 @@ function addCustomMarker(latitude, longitude, message, iconURL) {
     initializeMap(latitude, longitude);
     }
     
-    
-        
-   
-    
-       
     // Crie um ícone personalizado
     const customIcon = L.icon({
         iconUrl: iconURL,  // Caminho para o ícone personalizado
-        iconSize: [32, 32],  // Tamanho do ícone (ajuste conforme necessário)
-        iconAnchor: [16, 16],  // Âncora do ícone (ajuste conforme necessário)
+        iconSize: [32, 32],  // Tamanho do ícone
+        iconAnchor: [16, 16],  // Âncora do ícone 
     });
 
     const newMarker = L.marker([latitude, longitude], { icon: customIcon }).addTo(map);
