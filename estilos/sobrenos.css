@@ -60,6 +60,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-right: 10px;
+  margin-left:10px;
 }
 
 .instagram-image {
@@ -70,12 +71,14 @@ main {
 }
 
 .text-container {
+  color: black !important;
+  text-decoration: none !important;
   width: 100%;
   box-sizing: border-box;
   text-align: justify;
   background-color: var(--cor-de-fundo-destaque);
   padding: 20px;
-  min-height: 320px;
+  min-height: 370px;
 }
 
 
