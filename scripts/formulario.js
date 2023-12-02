@@ -1,7 +1,7 @@
 async function enviarFormulario(event) {
   event.preventDefault();
 
-  const denuncia = document.getElementById('tipodedenuncia').value;
+  const tipodedenuncia = document.getElementById('tipodedenuncia').value;
   const dataInput = document.getElementById('data');
   const inputValue = dataInput.value;
   const selectedDate = new Date(inputValue);
