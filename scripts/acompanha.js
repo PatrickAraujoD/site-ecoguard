@@ -25,7 +25,7 @@ async function enviarFormulario(event) {
           }
 
           const responseData = await response.json();
-          const url = `/src/feedback.html?id=${responseData.id}`;
+          const url = `/src/feedback.html?id=${responseData.protocolo}`;
           window.location.href = url;
         } else {
           console.error('Erro ao obter denúncia:', response.statusText);
