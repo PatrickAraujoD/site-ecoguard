@@ -45,14 +45,13 @@ select {
 
 .btn{
     position: relative;
-    width: 50%;
+    width: 70%;
     align-items: center;
     padding: 5px;
     border-radius: 10px;
     margin: 10px auto;
     text-align: center;
 }
-
 
 textarea {
   height: 80px;
@@ -129,4 +128,7 @@ color: #4CAF50; /* Cor verde para sucesso */
     margin: 10px auto 40px auto;
   }
   
+  .btn{
+    width: 50%;
+  }
 }

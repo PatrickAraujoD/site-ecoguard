@@ -16,6 +16,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 main{
   font-family: 'Poppins', serif;
 }
@@ -31,12 +32,11 @@ main{
   height: 150px;
 }
 
-
 .setaesquerda img {
   order:1;
   margin-left: 20px;
   align-items: center;
-  top:42px;
+  top: 42px;
   position: absolute;
   width: 25px;
 
@@ -56,16 +56,19 @@ main{
   margin-right: 10px;
 }
 
-.logo>div>a{
+.logo>div>a, .cabecalho div span{
   color: black;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .nome>a{
   font-family: 'Abril Fatface', serif;
 }
 
-.planet {
+.cabecalho div .planet {
   color: var(--verde-botoes);
   margin-top: -10px;
 }
@@ -137,7 +140,7 @@ footer {
 }
 
 
-.divRodape > div > h1:last-child {
+.divRodape > div > span:last-child, .divRodape > div > a:last-child{
   color: var(--cor-de-letra);
   margin-top: -10px;
 }
@@ -148,11 +151,14 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
-.divRodape  >div>h1{
-  font-size: 25px;
+
+.divRodape  >div{
+  display: flex;
+  flex-direction: column;
 }
-.divRodape  >div>a>h1{
-  font-size: 25px;
+
+.divRodape  >div>span, .divRodape div a span{
+  font-size: 20px;
 }
 
 .divRodape > div > a{
@@ -169,13 +175,16 @@ footer {
     margin-right: 10px;
   }
   
-  .divRodape  >div>h1{
+  .divRodape  >div>span{
     font-size: 32px;
   }
-  .divRodape  >div>a>h1{
+  .divRodape  >div>a>span{
     font-size: 32px;
   }
   
+  .divRodape div a:last-child{
+    margin-top: -15px;
+  }
 }
 
 

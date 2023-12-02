@@ -45,12 +45,12 @@ main {
 
 .subtitulo{
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.subtitulo h1:last-child {
-  margin-left: 20px;
+.subtitulo h2{
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .denunciaInfo{
@@ -100,9 +100,16 @@ margin: 10px 0;
 #errordiv{
 border: 2px solid #4CAF50; 
 }
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   .informacoesdenuncia {
     max-width: 50%;
   }
+
+  .subtitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
 
 }
