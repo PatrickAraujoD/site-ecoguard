@@ -13,6 +13,7 @@ async function enviarFormulario(event) {
   const bairro = document.getElementById('bairro').value;
   const descricaoLocal = document.getElementById('descricaoLocal').value;
   const contatos = document.getElementById('contatos').value;
+  const email =document.getElementById('email').value;
 
 
   const loadingDiv = document.getElementById('loadingDiv');
@@ -37,6 +38,7 @@ async function enviarFormulario(event) {
         bairro,
         descricaoLocal,
         contatos,
+        email,
       }),
     });
 
