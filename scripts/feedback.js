@@ -21,7 +21,7 @@ async function carregarDenuncia() {
           denunciaInfo.innerHTML = `
             <div class="subtitulo">
             <h1> <span class="color">Protocolo:</span> ${denunciaData.protocolo}</h1>
-            <h2><span class="color">Status:</span> Enviado</h2>
+            <h2><span class="color">Status:</span>${denunciaData.status}</h2>
             </div>
             </div>
             <p><span class="color">Denúncia sobre:</span><br>${denunciaData.tipo_de_denuncia}</p>

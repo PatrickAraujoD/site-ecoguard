@@ -48,7 +48,10 @@ main {
 }
 
 .subtitulo h2{
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 17px;
   margin-bottom: 10px;
 }
 
@@ -58,7 +61,10 @@ main {
 }
 
 .denunciaInfo>div>h1{
-  
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 17px;
   margin-bottom: 10px;
 }
 
@@ -67,6 +73,7 @@ main {
 }
 
 .color{
+  margin-right: 5px;
   color: var(--verde-botoes);
   font-weight: 800;
 }
@@ -101,18 +108,20 @@ border: 2px solid #c50404;
   .informacoesdenuncia {
     max-width: 50%;
   }
+
+  .subtitulo{
+    font-size: 20px;
+  }
+  .subtitulo >h2{
+    font-size: 20px;
+  }
   .denunciaInfo>div>h1{
     font-size: 20px;
-    margin-bottom: 10px;
   }
-  .subtitulo h2{
+
+  .denunciaInfo>p{
     font-size: 20px;
-    margin-bottom: 10px;
   }
-  .subtitulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  
 
 }
