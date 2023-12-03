@@ -3,6 +3,7 @@
 main {
   z-index: 1;
 }
+
 .cabecalho > img{
   max-width: 70px;
   margin-right: 10px;
@@ -32,6 +33,7 @@ main {
   color: var(--cor-de-letra);
   margin-top: -15px;
 }
+
 .descricao {
   max-width: 400px;
   text-align: justify;
@@ -58,7 +60,6 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 0;
-
 }
 
 .division {
@@ -73,40 +74,29 @@ main {
   margin-bottom: 30px;
   font-weight: bold;
 }
+
 .informacoes {
   margin-bottom: 20px;
   box-sizing: border-box;
   text-align: justify;
 }
 
-
 .links {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   text-decoration: none;
   color: black;
   font-weight: 600;
 }
-.links:hover{
-  border-bottom: 2px solid #000;
-  padding-bottom: 5px;
-  font-size: 17px;
-}
-.link{
+
+.link, .linklei{
   color: #000;
 }
-.link:hover{
-  border-bottom: 2px solid #000;
-  padding-bottom: 5px;
-  font-size: 27px;
-}
-.links > img {
-  width: 13px;
-  height: 13px;
-  transition: transform 1.2s ease;
-}
 
-.links > img:hover {
-  transform: translateX(20px);
-  cursor: pointer;
+.links > img {
+  margin-left: 10px;
+  display: none;
 }
 
 .sobrenos {
@@ -119,8 +109,6 @@ main {
   color: #000;
   font-weight: normal;
   font-size: 35px;
-  
-
 }
 
 .sobrenosEco > h3 >a{
@@ -131,7 +119,6 @@ main {
   margin-bottom: 20px;
   font-family: 'Abril Fatface','Poppins' ;
 }
-
 
 .valores > h5 {
   font-weight: 500;
@@ -144,8 +131,6 @@ main {
   font-size: 17px;
   text-align: justify;
 }
-
-
 
 @media (min-width: 1024px) {
   header {
@@ -179,17 +164,18 @@ main {
     z-index: -1;
     padding: 40px 50px;
   }
+
   .division{
     padding: auto;
   }
+
   .divsecundary {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-
   }
-
+  
   .sobrenos {
     margin: 50px 50px;
     display: flex;
@@ -214,19 +200,13 @@ main {
     max-width: 522px;
   }
   
-
   .valores > h5 {
     font-weight: 500;
     font-size: 26px;
     text-align: justify;
   }
 
-
-
-
-
 }
-
 
 @media (min-width: 768px) {
   .primary {
@@ -236,9 +216,11 @@ main {
     background-color: var(--cor-de-fundo);
     border-radius: 10px;
   }
+
   .subtitulo {
     margin-bottom: 10px;
   }
+
   .imgPlaneta {
     display: block;
     max-width: 300px;
@@ -271,5 +253,30 @@ main {
     justify-content: center;
     height: 520px;
   }
+
+  .links > img {
+    display:block ;
+    width: 13px;
+    height: 13px;
+    transition: transform 1.2s ease;
+  }
+  
+  .links > img:hover {
+    transform: translateX(20px);
+    cursor: pointer;
+  }
+
+  .linklei:hover{
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    font-size: 17px;
+  }
+
+  .link:hover{
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    font-size: 27px;
+  }
+  
 
 }
