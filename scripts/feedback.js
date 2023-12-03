@@ -16,6 +16,7 @@ async function carregarDenuncia() {
         const denunciaInfo = document.getElementById('denunciaInfo');
         if (denunciaInfo) {
           const contatoInfo = denunciaData.contato && denunciaData.contato.trim() !== '' ? denunciaData.contato : 'Sem informações de contato';            
+          const emailInfo = denunciaData.email && denunciaData.email.trim() !== '' ? denunciaData.email : 'Sem informações de email';
           const feedbackInfo = denunciaData.respostaemail ? denunciaData.respostaemail : 'Aguardando feedback';
 
           denunciaInfo.innerHTML = `
@@ -33,6 +34,7 @@ async function carregarDenuncia() {
             <p><span class="color">Bairro:</span><br>${denunciaData.bairro}</p>
             <p><span class="color">Descrição do local:</span><br>${denunciaData.descricao_do_local}</p>
             <p><span class="color">Contato:</span><br>${contatoInfo}</p>
+            <p><span class="color">Email:</span><br>${emailInfo}</p>
             <p><span class="color">Feedback:</span><br>${feedbackInfo}</p>
           `;
         }
