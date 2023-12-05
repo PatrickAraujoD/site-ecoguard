@@ -15,7 +15,7 @@ async function carregarDenuncia() {
         // Exibir informações da denúncia na div denunciaInfo
         const denunciaInfo = document.getElementById('denunciaInfo');
         if (denunciaInfo) {
-          const contatoInfo = denunciaData.contato && denunciaData.contato.trim() !== '' ? denunciaData.contato : 'Sem informações de contato';            
+          const contatoInfo = denunciaData.contato_celular && denunciaData.contato_celular.trim() !== '' ? denunciaData.contato_celular : 'Sem informações de contato';            
           const emailInfo = denunciaData.email && denunciaData.email.trim() !== '' ? denunciaData.email : 'Sem informações de email';
           const feedbackInfo = denunciaData.respostaemail ? denunciaData.respostaemail : 'Aguardando feedback';
 
