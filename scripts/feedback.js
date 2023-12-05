@@ -25,7 +25,7 @@ async function carregarDenuncia() {
             <h2><span class="color">Status:</span>${denunciaData.status}</h2>
             </div>
             </div>
-            <p><span class="color">Denúncia sobre:</span><br>${denunciaData.nome_crime_ambiental}</p>
+            <p><span class="color">Denúncia sobre:</span><br>${denunciaData.nome_crimes_ambientais}</p>
             <p><span class="color">Data do Ocorrido:</span><br>${denunciaData.data_do_ocorrido}</p>
             <p><span class="color">Relato:</span><br>${denunciaData.relato}</p>
             <p><span class="color">Logradouro:</span><br>${denunciaData.logradouro}</p>
