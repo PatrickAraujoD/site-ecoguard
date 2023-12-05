@@ -14,17 +14,11 @@ main {
   flex: 1; 
 }
 
-.nome > a {
-  color: black;
-}
-
-.nome > a:last-child {
-  color: var(--cor-de-letra);
-}
 .cabecalho {
   height: 100px;
 }
-.info-box {
+
+.tituloPEVS {
   display: flex;
   min-height: calc(100vh - (150px + 126px));
   flex-direction: column;
@@ -32,26 +26,27 @@ main {
   align-items: center;
   width: 100%;
 }
-.info-box > h1 {
-  display: flex;
+
+.tituloPEVS > h1 {
   font-size: 20px;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   margin-top: 15px;
   margin-left: 15px;
   margin-right: 15px;
 }
-.info-box > p {
+
+.tituloPEVS > p {
   text-align: center;
   margin-left: 25px;
   margin-right: 25px;
   font-size: 20px;
 }
+
 form {
   margin-top: 20px;
   width: 80%;
 }
+
 #material{
   margin-top: 10px;
   display: flex;
@@ -62,6 +57,7 @@ form {
   border: 1px solid var(--verde-botoes);
   width: 100%;
 }
+
 #mapid {
   margin: 20px;
   height: 30vh;
@@ -73,20 +69,22 @@ form {
   bottom: 0;
   width: 100%;
 }
+
 .divRodape>div>a{
   color: rgb(0, 0, 0);
 }
 
 @media (min-width: 1024px) {
  
-  .info-box > h1 {
+  .tituloPEVS > h1 {
     display: flex;
     font-size: 35px;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
-  .info-box > p {
+
+  .tituloPEVS > p {
     font-size: 20px;
   }
 

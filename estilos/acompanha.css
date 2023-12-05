@@ -19,22 +19,21 @@ main {
   height: 100px;
 }
 
-.titulo{
-  text-align: center;
-  color: var(--verde-botoes);
-  margin-bottom: 20px;
-}
-
 .forms{
-  
   display: flex;
   flex-direction: column;
   max-width: 380px;
   background-color: var(--cor-de-fundo);
-  margin: auto;
+  margin: 20px;
   padding: 50px;
   border: 2px solid var(--verde-botoes);
   border-radius: 40px;
+}
+
+.titulo{
+  text-align: center;
+  color: var(--verde-botoes);
+  margin-bottom: 20px;
 }
 
 .forms>h2{
@@ -74,7 +73,7 @@ label{
   color: black;
 }
 
-#loadingDiv,
+#divcarregando,
 #errordiv{
   position: fixed;
   top: 50%;
@@ -82,16 +81,18 @@ label{
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 20px;
-  border: 2px solid #4CAF50; /* Cor verde para sucesso */
   border-radius: 10px;
   background-color: #f8f8f8;
-  z-index: 999; /* Valor alto para sobrepor outros elementos */
+  z-index: 999;
 }
 
-#loadingDiv p,
-#errordiv p
-{
+#divcarregando p,
+#errordiv p{
 margin: 10px 0;
+}
+
+#divcarregando{
+  border: 2px solid #4CAF50;
 }
 
 #errordiv{

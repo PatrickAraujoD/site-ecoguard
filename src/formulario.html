@@ -10,11 +10,11 @@
 </head>
 <body>
   <header class="cabecalho">
-    <div class="setaesquerda">
+    <div class="setavoltar">
       <a href="../index.html"><img src="../assets/images/setaesquerda.png" alt="seta apontada para esquerda"></a>
     </div>
     <div class="logo">
-      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="símbolo de reciclagem"></a>
+      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo da logoecoguard"></a>
       <div class="logonome">
         <a href="../index.html"><span>ECO</span></a>
         <a href="../index.html"><span class="planet">GUARD</span></a>
@@ -22,7 +22,7 @@
     </div>
   </header>
   <main>
-    <h1 class="Denunciash1">Faça sua denúncia</h1>
+    <h1 class="titulodenuncia">Faça sua denúncia</h1>
     <form id="meuFormulario" onsubmit="enviarFormulario(event)">
       <label for="denuncia">Qual sua denúncia</label>
       <select name="tipodedenuncia" id="tipodedenuncia" required></select>
@@ -53,7 +53,7 @@
       <input type="email" id="email" name="email" placeholder="Email(opcional)">
       <button type="submit" class="btn">Enviar</button>
     </form>
-    <div id="loadingDiv" style="display: none;">
+    <div id="divcarregando" style="display: none;">
       <p>Enviando denúncia. Aguarde...</p>
       <button class="btn" id="fecharMensagem1" onclick="fecharMensagem1()">Fechar</button>
     </div>
@@ -61,7 +61,7 @@
       <p>Erro ao enviar denúncia. Tente novamente...</p>
       <button class="btnerro" id="fecharMensagem2" onclick="fecharMensagem2()">Fechar</button>
     </div>
-    <div id="successDiv" style="display: none;">
+    <div id="successoDiv" style="display: none;">
       <p>Denúncia enviada com sucesso</p>
       <p id="protocoloMensagem"></p>
       <p>Guarde esse protocolo para acompanhar sua denúncia</p>
@@ -71,7 +71,7 @@
   </main>
   <footer>
     <div class="divRodape">
-      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo de reciclagem"></a>        
+      <a href="../index.html"><img src="../assets/images/logoecoguard.svg" alt="simbolo da logoecoguard"></a>        
       <div>   
         <a href="../index.html"><span>ECO</span></a>
         <a href="../index.html"><span class="planet">GUARD</span></a>
@@ -79,10 +79,10 @@
     </div>
     <div> 
         <a href="https://www.instagram.com/ecoguardslz/" target="_blank">
-           <img src="../assets/images/instagramicon.svg" alt="foto instagram" class="imgRodape"> 
+           <img src="../assets/images/instagramicon.svg" alt="logo instagram" class="redesociallogo"> 
         </a>
         <a href="https://x.com/ecoguardslz?s=21" target="_blank">
-            <img src="../assets/images/twittericon.svg" alt="foto twiter" class="imgRodape">
+            <img src="../assets/images/twittericon.svg" alt="logo twiter" class="redesociallogo">
         </a>
     </div>
   </footer>

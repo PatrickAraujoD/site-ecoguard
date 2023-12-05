@@ -53,7 +53,7 @@ document.getElementById('material').addEventListener('change', function(e) {
 
     removeMarkers();
 
-    if (selectedValue === 'Reciclaveis') {
+    if (selectedValue === 'Recicláveis') {
         addCustomMarker(-2.531559, -44.233344, 'Ecoponto Angelim', '../assets/images/iconrecilceverde.svg');
         addCustomMarker(-2.551155, -44.235892, 'Ecoponto Anil', '../assets/images/iconrecilceverde.svg');
         addCustomMarker(-2.487345, -44.245516, 'Ecoponto Avenida dos Holandeses', '../assets/images/iconrecilceverde.svg');
@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const materialSelect = document.getElementById('material');
     const selectedValue = materialSelect.value;
 
-    if (selectedValue === 'Reciclaveis') {
+    if (selectedValue === 'Recicláveis') {
         addCustomMarker(-2.531559, -44.233344, 'Ecoponto Angelim', '../assets/images/iconrecilceverde.svg');
         addCustomMarker(-2.551155, -44.235892, 'Ecoponto Anil', '../assets/images/iconrecilceverde.svg');
         addCustomMarker(-2.487345, -44.245516, 'Ecoponto Avenida dos Holandeses', '../assets/images/iconrecilceverde.svg');

@@ -4,10 +4,10 @@ async function enviarFormulario(event) {
 
     const protocolo = document.getElementById('protocolo').value;
      console.log(protocolo);
-    const loadingDiv = document.getElementById('loadingDiv');
+    const divcarregando = document.getElementById('divcarregando');
 
-    if (loadingDiv) {
-      loadingDiv.style.display = 'block';
+    if (divcarregando) {
+      divcarregando.style.display = 'block';
     }
 
     if (protocolo) {
@@ -20,8 +20,8 @@ async function enviarFormulario(event) {
         });
 
         if (response.ok) {
-          if (loadingDiv) {
-            loadingDiv.style.display = 'none';
+          if (divcarregando) {
+            divcarregando.style.display = 'none';
           }
 
           const responseData = await response.json();
@@ -29,8 +29,8 @@ async function enviarFormulario(event) {
           window.location.href = url;
         } else {
           console.error('Erro ao obter denúncia:', response.statusText);
-          if (loadingDiv) {
-            loadingDiv.style.display = 'none';
+          if (divcarregando) {
+            divcarregando.style.display = 'none';
           }
 
           const errordiv = document.getElementById('errordiv');
@@ -54,9 +54,9 @@ async function enviarFormulario(event) {
   }
 
   function fecharMensagem1() {
-    const loadingDiv = document.getElementById('loadingDiv');
+    const divcarregando = document.getElementById('divcarregando');
 
-    if (loadingDiv) {
-      loadingDiv.style.display = 'none';
+    if (divcarregando) {
+      divcarregando.style.display = 'none';
     }
   }

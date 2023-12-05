@@ -7,7 +7,6 @@ body {
   margin: 0;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -43,16 +42,16 @@ main {
   box-sizing: border-box;
   text-align: justify;
 }
+
 .redessociais > h2{
   margin: 10px 50px 0 50px;
   text-align: center;
   Color:var(--verde-botoes);
 }
 
-
 .instagram-carousel {
   margin-top: 20px;
-  width: 80%; /* Largura do carrossel */
+  width: 80%;
 }
 
 .post-container {
@@ -81,13 +80,13 @@ main {
   min-height: 370px;
 }
 
-
 @media (min-width: 1024px) {
   .instagram-carousel {
     text-align: center;
     margin-top: 20px;
-    width: 80%; /* Largura do carrossel */
+    width: 80%; 
   }
+
   .post-container {
     display: flex;
     flex-direction: column;
@@ -112,7 +111,6 @@ main {
     background-color: var(--cor-de-fundo-destaque);
     padding: 20px;
   }
-  
 
 }
 
@@ -121,8 +119,9 @@ main {
   .instagram-carousel {
     text-align: center;
     margin-top: 20px;
-    width: 80%; /* Largura do carrossel */
+    width: 80%;
   }
+  
   .post-container {
     display: flex;
     flex-direction: column;

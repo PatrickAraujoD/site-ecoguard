@@ -21,7 +21,6 @@ main{
   font-family: 'Poppins', serif;
 }
 
-
 .cabecalho {
   display: flex;
   justify-content: center;
@@ -32,7 +31,7 @@ main{
   height: 150px;
 }
 
-.setaesquerda img {
+.setavoltar img {
   order:1;
   margin-left: 20px;
   align-items: center;
@@ -64,17 +63,12 @@ main{
   flex-direction: column;
 }
 
-.nome>a{
-  font-family: 'Abril Fatface', serif;
-}
-
 .cabecalho div .planet {
   color: var(--verde-botoes);
   margin-top: -10px;
 }
 
-.btn,
-.btn1 {
+.btn {
   text-decoration: none;
   background-color: var(--verde-botoes);
   padding: 10px 15px;
@@ -155,13 +149,12 @@ footer {
   margin-right: 5px;
 }
 
-
 .divRodape > div > span:last-child, .divRodape > div > a:last-child{
   color: var(--cor-de-letra);
   margin-top: -10px;
 }
 
-.imgRodape {
+.redesociallogo {
   background-color: var(--verde-botoes);
   padding: 5px;
   border-radius: 50%;
@@ -180,6 +173,7 @@ footer {
 .divRodape > div > a{
   color: black;
 }
+
 @media (min-width: 798px) {
   .divRodape > a> img{
     max-width: 60px;
@@ -194,6 +188,7 @@ footer {
   .divRodape  >div>span{
     font-size: 32px;
   }
+
   .divRodape  >div>a>span{
     font-size: 32px;
   }

@@ -16,10 +16,10 @@ async function enviarFormulario(event) {
   const email =document.getElementById('email').value;
 
 
-  const loadingDiv = document.getElementById('loadingDiv');
+  const divcarregando = document.getElementById('divcarregando');
   
-  if (loadingDiv) {
-    loadingDiv.style.display = 'block';
+  if (divcarregando) {
+    divcarregando.style.display = 'block';
   }
   try {
 
@@ -43,26 +43,26 @@ async function enviarFormulario(event) {
     });
 
     if (response.ok) {
-      if (loadingDiv) {
-        loadingDiv.style.display = 'none';
+      if (divcarregando) {
+        divcarregando.style.display = 'none';
       }
       // Obter o ID da denúncia a partir da resposta do servidor
       const responseData = await response.json();
       const idDaDenuncia = responseData.id;
       
       // Exibir o ID na página
-      const successDiv = document.getElementById('successDiv');
+      const successoDiv = document.getElementById('successoDiv');
       const protocoloMensagem = document.getElementById('protocoloMensagem');
 
-      if (successDiv && protocoloMensagem) {
-        successDiv.style.display = 'block';
+      if (successoDiv && protocoloMensagem) {
+        successoDiv.style.display = 'block';
         protocoloMensagem.textContent = `Protocolo: ${idDaDenuncia}`;
       }
   
     } else {
       console.error('Erro ao inserir resposta:', response.statusText);
-      if (loadingDiv) {
-        loadingDiv.style.display = 'none';
+      if (divcarregando) {
+        divcarregando.style.display = 'none';
       }
       // Exibir mensagem de erro
       const errordiv = document.getElementById('errordiv');
@@ -76,7 +76,7 @@ async function enviarFormulario(event) {
   }
 }
 function fecharMensagem2() {
-  // Oculta a div de sucesso
+  // Oculta a div de erro
   const errordiv = document.getElementById('errordiv');
   
   if (errordiv) {
@@ -86,12 +86,12 @@ function fecharMensagem2() {
   
 }
 function fecharMensagem1() {
-  // Oculta a div de sucesso
-  const loadingDiv = document.getElementById('loadingDiv');
+  // Oculta a div de carregando
+  const divcarregando = document.getElementById('divcarregando');
 
   
-  if (loadingDiv) {
-    loadingDiv.style.display = 'none';
+  if (divcarregando) {
+    divcarregando.style.display = 'none';
   }
 
 }
@@ -112,10 +112,10 @@ function acompanharDenuncia() {
 
 function fecharMensagem() {
   // Oculta a div de sucesso
-  const successDiv = document.getElementById('successDiv');
+  const successoDiv = document.getElementById('successoDiv');
 
-  if (successDiv) {
-    successDiv.style.display = 'none';
+  if (successoDiv) {
+    successoDiv.style.display = 'none';
   }
 
   // Recarrega a página apenas quando o botão "Fechar" é clicado
@@ -139,28 +139,24 @@ function applyPhoneMask(input) {
   input.value = value;
 }
 
-// Get the current year
+
 const currentYear = new Date().getFullYear();
 
-// Format the current date as yyyy-mm-dd
 const today = new Date().toISOString().split('T')[0];
 
-// Set the max attribute of the date input
 document.getElementById('data').setAttribute('max', `${currentYear}-12-31`);
 
-// Set the value of the date input to the current date
 document.getElementById('data').value = today;
 
 
 async function carregarTiposDenuncia() {
   try {
-    // Faz uma solicitação HTTP GET para obter tipos de denúncia do servidor
     const response = await fetch('https://servidor-banco-de-dados-production.up.railway.app/tiposdenuncia');
     const tiposDenuncia = await response.json();
 
-    // Preenche dinamicamente as opções do select
+   
     const select = document.getElementById('tipodedenuncia');
-    select.innerHTML = ''; // Limpa as opções existentes
+    select.innerHTML = ''; 
 
     tiposDenuncia.forEach(tipo => {
       const option = document.createElement('option');
@@ -174,5 +170,4 @@ async function carregarTiposDenuncia() {
   }
 }
 
-// Chama a função para carregar tipos de denúncia ao carregar a página (opcional)
 document.addEventListener('DOMContentLoaded', carregarTiposDenuncia);

@@ -50,7 +50,7 @@ main {
   width: 100%;
 }
 
-.divsecundary {
+.divmaiordecima {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
@@ -94,9 +94,14 @@ main {
   color: #000;
 }
 
+.linklei{
+  font-weight: 600;
+}
+
 .links > img {
+  width: 13px;
+  height: 13px;
   margin-left: 10px;
-  display: none;
 }
 
 .sobrenos {
@@ -105,13 +110,13 @@ main {
   flex-direction: column;
 }
 
-.sobrenosEco > h4 >a{
+.nomeEcoGuard > h4 >a{
   color: #000;
   font-weight: normal;
   font-size: 35px;
 }
 
-.sobrenosEco > h3 >a{
+.nomeEcoGuard > h3 >a{
   font-size: 50px;
   font-weight: 500;
   color: var(--cor-de-letra);
@@ -120,13 +125,13 @@ main {
   font-family: 'Abril Fatface','Poppins' ;
 }
 
-.valores > h5 {
+.textosobrenos > h5 {
   font-weight: 500;
   font-size: 26px;
   text-align: justify;
 }
 
-.valores > p {
+.textosobrenos > p {
   margin-top: 20px;
   font-size: 17px;
   text-align: justify;
@@ -169,7 +174,7 @@ main {
     padding: auto;
   }
 
-  .divsecundary {
+  .divmaiordecima {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -184,23 +189,23 @@ main {
     align-items: baseline;
   }
 
-  .sobrenosEco > h4 {
+  .nomeEcoGuard > h4 {
     font-weight: normal;
     font-size: 35px;
   }
 
-  .sobrenosEco > h3 {
+  .nomeEcoGuard > h3 {
     font-size: 50px;
     font-weight: 500;
     color: var(--cor-de-letra);
     margin-top: -20px;
   }
 
-  .valores {
+  .textosobrenos {
     max-width: 522px;
   }
   
-  .valores > h5 {
+  .textosobrenos > h5 {
     font-weight: 500;
     font-size: 26px;
     text-align: justify;
@@ -209,6 +214,7 @@ main {
 }
 
 @media (min-width: 768px) {
+  
   .primary {
     display: flex;
     flex-direction: row;
@@ -237,7 +243,8 @@ main {
     align-items: flex-start; 
     height: 100%;
   }
-  .divsecundary{
+  
+  .divmaiordecima{
     gap:1;
   }
 
@@ -247,7 +254,8 @@ main {
     justify-content: center;
     height: 520px;
   }
-  .divquartenary{
+
+  .divmaiordebaixo{
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -255,7 +263,6 @@ main {
   }
 
   .links > img {
-    display:block ;
     width: 13px;
     height: 13px;
     transition: transform 1.2s ease;
@@ -278,5 +285,4 @@ main {
     font-size: 27px;
   }
   
-
 }

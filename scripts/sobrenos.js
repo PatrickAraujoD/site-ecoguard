@@ -16,7 +16,6 @@ $(document).ready(function () {
 
       const instagramFeedElement = $('#instagram-feed');
 
-      // Limpe o conteúdo existente (se houver)
       instagramFeedElement.html('');
 
       // Verifique se há dados de publicações
@@ -44,14 +43,14 @@ $(document).ready(function () {
           dots: true,
           responsive: [
             {
-              breakpoint: 1024, // Largura de tela 1024px e abaixo
+              breakpoint: 1024,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1
               }
             },
             {
-              breakpoint: 798, // Largura de tela 798px e abaixo
+              breakpoint: 798, 
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -68,15 +67,15 @@ $(document).ready(function () {
     });
 
     function createImageElements(post, postElement) {
-  // Crie um elemento de âncora (hiperlink)
+  
   const anchorElement = document.createElement('a');
   anchorElement.href = post.permalink;
 
-  // Crie um elemento de imagem e anexe ao elemento de âncora
+
   const containerElement = document.createElement('div');
   containerElement.classList.add('post-container');
 
-  // Crie um elemento de imagem e anexe ao contêiner
+
   const imageElement = document.createElement('img');
   imageElement.src = post.media_url;
   imageElement.alt = 'Instagram Image';
@@ -87,7 +86,6 @@ $(document).ready(function () {
 
   const textContainer = document.createElement('div');
   textContainer.classList.add('text-container');
-  // Adicione o caption ao contêiner de texto
   const anchorElemento = document.createElement('a');
   anchorElemento.href = post.permalink;
   const captionElement = document.createElement('p');
@@ -96,13 +94,13 @@ $(document).ready(function () {
   anchorElemento.appendChild(captionElement);
   textContainer.appendChild(anchorElemento);
 
-  // Adicione o contêiner de texto ao contêiner principal
+  
   containerElement.appendChild(textContainer);
 
-  // Adicione o contêiner principal ao elemento da postagem
+  
   postElement.appendChild(containerElement);
 
-  // Adicione espaçamento abaixo de cada contêiner
+
  
 }
 

@@ -1,26 +1,21 @@
 @import 'principal.css';
 
-header .nome h1:first-child{
-    color: var(--verde-botoes);
-}
-
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-  }
+}
   
-  
-  main {
+main {
     padding: 50px;
-
     flex: 1; 
-  }
+}
+
 .cabecalho {
   height: 100px;
 }
+
 .contener-conheca-leis{
     display: flex;
     flex-direction: column;
@@ -46,6 +41,7 @@ body {
     padding: 15px;
     text-align: justify;
 }
+
 .quadro-de-leis{
     background-color: var(--cor-de-fundo);
     padding: 30px;

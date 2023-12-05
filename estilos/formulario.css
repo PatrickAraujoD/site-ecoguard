@@ -17,7 +17,7 @@ form {
 .cabecalho > div > a {
   color: #000;
 }
-.Denunciash1 {
+.titulodenuncia {
   text-align: center;
   margin: 30px 0px;
   color: var(--verde-botoes);
@@ -86,8 +86,8 @@ form > div > div {
   color: black;
 }
 
-#loadingDiv,
-#successDiv,
+#divcarregando,
+#successoDiv,
 #errordiv{
   position: fixed;
   top: 50%;
@@ -101,13 +101,13 @@ form > div > div {
   z-index: 999; 
 }
 
-#loadingDiv p,
-#successDiv p,
+#divcarregando p,
+#successoDiv p,
 #errordiv p{
   margin: 10px 0;
 }
 
-#successDiv {
+#successoDiv {
   border: 2px solid #4CAF50; 
 }
 #errordiv{

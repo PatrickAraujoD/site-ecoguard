@@ -9,14 +9,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
-.textcenter{
+.textoinicial{
   text-align: center;
   margin: 40px;
 }
-.textcenter>h2{
+.textoinicial>h2{
   color: var(--verde-botoes);
 }
 
@@ -46,11 +45,11 @@
   margin-bottom: 30px;
 }
 
-.divsecundary {
+.divisinha {
   text-align: justify;
 }
 
-.divsecundary>h3 {
+.divisinha>h3 {
   color: var(--verde-botoes);
   
 }
@@ -81,7 +80,6 @@
   color:black;
 }
 
-
 @media (min-width: 1024px) {
   header {
     position: relative;
@@ -103,7 +101,7 @@
     z-index: -1;
     padding: 0 100px;
   }
-  .divsecundary{
+  .divisinha{
     width: 50%;
   }
   .secundary>div>p{
@@ -111,6 +109,5 @@
     margin-left: 0;
     margin-right: 0;
   }
-  
  
 }
