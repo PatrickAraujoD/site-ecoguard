@@ -10,7 +10,7 @@
 - [Como Usar](#como-usar)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
-- [Contribuição](#contribuição)
+- [Contribuição](#Como você pode contribuir)
 - [Licença](#licença)
 - [Contato](#contato)
 
