@@ -18,3 +18,23 @@
 <p align = "justify">O objetivo principal do nosso site é oferecer uma maneira fácil e eficiente para a comunidade de São Luís realizar denúncias de atividades prejudiciais ao meio ambiente. Além disso, buscamos promover a conscientização ambiental, fornecendo informações educativas e recursos para encontrar pontos de entrega voluntária.</p>
 
 # Como Usar
+
+
+# Tecnologias Utilizadas
+- Node JS
+- Vercel
+- PostgresSQL
+- Railway
+
+# Como você pode contribuir:
+## 1. Faça denúncia
+  - Utilize nossa plataforma para relatar atividades prejudiciais ao meio ambiente em São Luís.
+  - Forneça detalhes relevantes e evidências sempre que possível.
+## 2. Compartilhe Conhecimento
+  - Ajude-nos a disseminar informações sobre práticas sustentáveis.
+  - Contribua com artigos, dicas e recursos educativos para promover a conscientização ambiental
+## 3. Envolva-se nas Redes Sociais
+  - Siga-nos nas redes sociais para obter as últimas atualizações e compartilhe nossas postagens.
+  - Engaje-se em conversas sobre a importância da preservação ambiental.
+## Contato
+  nome
