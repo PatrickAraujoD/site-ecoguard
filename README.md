@@ -37,4 +37,15 @@
   - Siga-nos nas redes sociais para obter as últimas atualizações e compartilhe nossas postagens.
   - Engaje-se em conversas sobre a importância da preservação ambiental.
 ## Contato
-  nome
+
+Se tiver alguma dúvida, sugestão ou precisar de suporte, sinta-se à vontade para entrar em contato com os criadores do projeto:
+
+- Patrick Camara Araujo
+  - E-mail: [patrick.araujo@discente.ufma.com](mailto:patrick.araujo@discente.ufma.com)
+  - GitHub: [@PatrickAraujoD](https://github.com/PatrickAraujoD)
+
+- Vitor Gabriel Rodrigues Sousa
+  - E-mail: [vitor.grs@discente.ufma.com](mailto:vitor.grs@discente.ufma.com)
+  - GitHub: [@vitorgrs](https://github.com/vitorgrs)
+
+Não hesite em nos contatar! Estamos aqui para ajudar.
