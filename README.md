@@ -9,9 +9,7 @@
 - [Visão Geral](#visão-geral)
 - [Como Usar](#como-usar)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
 - [Contribuição](#contribuição)
-- [Licença](#licença)
 - [Contato](#contato)
 
 # Visão Geral
@@ -27,13 +25,13 @@
 - Railway
 
 # Contribuição:
-## 1. Faça denúncia
+1. **Faça denúncia**
   - Utilize nossa plataforma para relatar atividades prejudiciais ao meio ambiente em São Luís.
   - Forneça detalhes relevantes e evidências sempre que possível.
-## 2. Compartilhe Conhecimento
+2. **Compartilhe Conhecimento**
   - Ajude-nos a disseminar informações sobre práticas sustentáveis.
   - Contribua com artigos, dicas e recursos educativos para promover a conscientização ambiental
-## 3. Envolva-se nas Redes Sociais
+3. **Envolva-se nas Redes Sociais**
   - Siga-nos nas redes sociais para obter as últimas atualizações e compartilhe nossas postagens.
   - Engaje-se em conversas sobre a importância da preservação ambiental.
 ## Contato
