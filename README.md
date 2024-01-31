@@ -10,7 +10,7 @@
 - [Como Usar](#como-usar)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
-- [Contribuição](#Como você pode contribuir)
+- [Contribuição](#contribuição)
 - [Licença](#licença)
 - [Contato](#contato)
 
@@ -26,7 +26,7 @@
 - PostgresSQL
 - Railway
 
-# Como você pode contribuir:
+# Contribuição:
 ## 1. Faça denúncia
   - Utilize nossa plataforma para relatar atividades prejudiciais ao meio ambiente em São Luís.
   - Forneça detalhes relevantes e evidências sempre que possível.
